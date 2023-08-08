@@ -915,7 +915,7 @@ export default function University() {
           >
             <p className="text-center">
               {t('open')} {"  "}
-              <a className=" underline" href="https://github.com/xartokoptiko/lifechain.gr">
+              <a className=" underline" href="https://github.com/xartokoptiko/lifechain-gr">
                 github
               </a>
             </p>
