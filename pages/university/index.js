@@ -619,7 +619,7 @@ export default function University() {
                 className="xl:max-w-[90vh] text-center
                         lg:max-w-[70vh]
                         md:max-w-[50vh]
-                        max-sm:max-w-[40vh]"
+                        max-sm:max-w-[40vh] max-sm:text-xl"
               >
                 {t('wait')}
               </p>
@@ -720,17 +720,17 @@ export default function University() {
             ></div>
             <img
               src="google play.png"
-              className="xl:w-[60vh] xl:h-[28vh]
-                                                  lg:w-[60vh] lg:h-[28vh]
-                                                  md:w-[50vh] md:h-[16vh]
-                                                  max-sm:w-[40vh] max-sm:h-[17vh]"
+              className="xl:w-[300px] xl:h-[200]
+                                                  lg:w-[250px] lg:h-[150px]
+                                                  md:w-[200px] md:h-[100]
+                                                  max-sm:w-[170px] max-sm:h-[100px]"
             />
             <img
               src="app-store.png"
-              className="xl:w-[55vh] xl:h-[18vh]
-                 lg:w-[55vh] lg:h-[18vh]
-                                                md:w-[45vh] md:h-[10vh]
-                                                max-sm:w-[35vh] max-sm:h-[13vh]
+              className="xl:w-[300px] xl:h-[100px]
+                 lg:w-[250px] lg:h-[100px]
+                                                md:w-[200px] md:h-[80px]
+                                                max-sm:w-[170px] max-sm:h-[60px]
                                                 max-sm:mb-10"
             />
           </div>
@@ -901,8 +901,8 @@ export default function University() {
           </svg>
         </div>
         <div
-          className="flex flex-col text-dark-blue font-extrabold justify-center items-center mt-20
-                                                                                                    max-sm:mt-10"
+          className="flex flex-col text-dark-blue font-extrabold justify-center items-center mt-20 max-sm:text-sm 
+                                                                                                     max-sm:mt-10"
         >
           <p className="mb-10">
             Email : <span className="underline">info@lifechain.gr</span>
@@ -930,7 +930,7 @@ export default function University() {
             <img src="twitter.png" className="w-[32px] h-[32px]" />
             <img src="facebook.png" className="w-[32px] h-[32px]" />
           </div>
-          <p className="mb-10">{t('right')}</p>
+          <p className="mb-10 text-center max-sm:text-xs">{t('right')}</p>
         </div>
       </div>
     </main>
