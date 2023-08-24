@@ -30,7 +30,7 @@ const initValues = { name: "", email: "", subject: "", message: "" };
 
 const initState = { isLoading: false, error: "", values: initValues };
 
-export default function newui() {
+export default function NewUI() {
   const [currentStep, setCurrentStep] = useState(1);
 
   const { t } = useTranslation("common");
