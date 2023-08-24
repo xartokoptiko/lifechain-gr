@@ -17,7 +17,11 @@ module.exports = {
         "yellow" : "#FDBF45",
         "white" : "#FFFFFF",
         "graywhite" : "#D9D9D9",
-        "black"  : "#000000"
+        "black"  : "#000000",
+        "root" : "#f6f1f0",
+        "deepred" : "#b20000",
+        "deepblue" : "#1d3b7f",
+        "deepgreen" : "#4d7a56"
       },
     },
   },
