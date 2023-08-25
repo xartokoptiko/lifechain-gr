@@ -210,7 +210,7 @@ export default function NewUI() {
 
           <div
             className="flex w-1/2 items-center justify-center
-                               max-sm:w-full"
+                               max-sm:w-full bg-[url('../public/dotsbg.png')] bg-contain bg-center bg-no-repeat"
           >
             <Login className="w-[80vh] h-[60vh]" />
           </div>
@@ -227,7 +227,7 @@ export default function NewUI() {
             className="flex flex-col xl:h-[60vh] justify-center items-center font-extrabold text-deepblue
                                       lg:h-[60vh]
                                       md:h-[40vh]
-                                      max-sm:h-[30vh]"
+                                      max-sm:h-[60vh]"
           >
             <p>
               Alert the University{" "}
@@ -247,7 +247,7 @@ export default function NewUI() {
             className="flex flex-col xl:h-[80vh] justify-center items-center font-extrabold text-deepblue
                                       lg:h-[80vh]
                                       md:h-[60vh]
-                                      max-sm:h-[40vh]"
+                                      max-sm:h-[70vh]"
           >
             <p>
               Instant <span className=" text-deepgreen">calls</span>
@@ -266,7 +266,7 @@ export default function NewUI() {
             className="flex flex-col xl:h-[80vh] justify-center items-center font-extrabold text-deepblue
                                       lg:h-[80vh]
                                       md:h-[60vh]
-                                      max-sm:h-[40vh]"
+                                      max-sm:h-[70vh]"
           >
             <p>
               <span className=" text-deepgreen">Usefull</span> links , maps and
@@ -285,8 +285,10 @@ export default function NewUI() {
 
         {/* Third sections*/}
         <div
-          className=" p-14 items-center justify-center
-                         max-sm:p-5"
+          className=" xl:p-14 items-center justify-center
+                      lg:p-10
+                      md:p-8   
+                      max-sm:p-5"
         >
           <p className="text-center mb-12 text-4xl font-extrabold text-deepblue">
             How it works
@@ -319,7 +321,7 @@ export default function NewUI() {
           </div>
 
           <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
-            <GuardLogin className="w-[80vh] h-[60vh] max-sm:w-[60vh] max-sm:h-[40vh]" />
+            <GuardLogin className=" flex flex-col w-[300px] h-[300px] max-sm:w-[200px] max-sm:h-[200px]" />
           </div>
         </div>
 
@@ -336,7 +338,7 @@ export default function NewUI() {
               />
             </div>
             <div
-              className="xl:w-[40vh] xl:h-[2vh] bg-dark-blue rounded-3xl mb-5
+              className="flex flex-row xl:w-[40vh] xl:h-[2vh] bg-dark-blue rounded-3xl mb-5
                         lg:w-[40vh] lg:h-[2vh]
                         md:w-[20vh] md:h-[1vh]
                         max-sm:w-[30vh] max-sm:h-[1vh]"
@@ -437,7 +439,7 @@ export default function NewUI() {
         </div>
 
         {/* ######################## footer section ######################## */}
-        <div className="flex flex-col items-center justify-evenly text-center h-[50vh] text-sm font-thin">
+        <div className="flex flex-col items-center justify-evenly text-center h-[50vh] text-xs font-extrabold">
         <div
               className="xl:w-[40vh] xl:h-[2vh] bg-dark-blue rounded-3xl mb-5
                         lg:w-[40vh] lg:h-[2vh]

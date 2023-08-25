@@ -3,10 +3,12 @@ import HealthAlertNew from "../svg/healthalertnew.svg";
 
 export default function HowTwo({ onPrevious, onNext }) {
   return (
-    <div className="flex flex-row bg-white p-10 pt-24 pb-24 rounded-3xl shadow-2xl items-center
-                           max-sm:flex-col">
+    <div className="flex flex-row bg-white xl:px-10 xl:min-h-[700px]  py-24 rounded-3xl shadow-2xl items-center
+    max-sm:flex-col     max-sm:p-5  max-sm:min-h-[900px] max-sm:justify-evenly
+                        lg:px-10    lg:min-h-[600px]
+                        md:px-6     md:min-h-[500px]">
       <div className="flex flex-col justify-center items-center w-1/2
-                                                                  max-sm:w-full">
+                                                                   max-sm:w-full bg-[url('../public/dots.png')] bg-contain bg-center bg-no-repeat">
         <HealthAlertNew
           className="xl:w-[50vh] xl:h-[53vh]
           lg:w-[45vh] lg:h-[48vh]

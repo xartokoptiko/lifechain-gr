@@ -3,14 +3,16 @@ import HomePageNew from "../svg/homepagenew.svg";
 
 export default function HowOne({ onNext }) {
   return (
-      <div className="flex flex-row bg-white p-10 pt-24 pb-24 rounded-3xl shadow-2xl items-center
-                           max-sm:flex-col     max-sm:p-5">
+    <div className="flex flex-row bg-white xl:px-10 xl:min-h-[700px]  py-24 rounded-3xl shadow-2xl items-center
+    max-sm:flex-col     max-sm:p-5  max-sm:min-h-[900px] max-sm:justify-evenly
+                        lg:px-10    lg:min-h-[600px]
+                        md:px-6     md:min-h-[500px]">
         <div className="flex flex-col justify-center items-center w-1/2
-                                                                  max-sm:w-full">
-          <HomePageNew className="xl:w-[50vh] xl:h-[53vh]
-                                  lg:w-[45vh] lg:h-[48vh]
-                                  md:w-[25vh] md:h-[28vh]
-                                  max-sm:w-[35vh] max-sm:h-[38vh]" />
+                                                                  max-sm:w-full bg-[url('../public/dots.png')] bg-contain bg-center bg-no-repeat ">
+          <HomePageNew className="xl:w-[300px] xl:h-[300px]
+                                  lg:w-[300px] lg:h-[300px]
+                                  md:w-[300px] md:h-[300px]
+                                  max-sm:w-[200px] max-sm:h-[200px]" />
         </div>
 
         <div className="flex flex-col justify-center items-center w-1/2
