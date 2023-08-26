@@ -127,7 +127,7 @@ export default function University() {
   return (
     <>
       <Head>
-        <title>Second New UI</title>
+        <title>Smart Alert University</title>
       </Head>
       <main className="flex flex-col w-full">
         {/* START OF HEADER */}
@@ -543,7 +543,10 @@ export default function University() {
         >
           <p>Lifechain university</p>
           <p>Email : info@lifechain.gr</p>
-          <p>{t("open")} <a>github</a></p>
+          <p>
+            {t("open")}{" "}
+            <a href="https://github.com/xartokoptiko/lifechain-gr">github</a>
+          </p>
           <div
             className="flex flex-row justify-evenly w-[35vh] align-middle items-center
                                                     max-sm:w-[30vh]
@@ -553,7 +556,12 @@ export default function University() {
             <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
             <img src="../../twitter.png" className="w-[32px] h-[32px]" />
             <img src="../../facebook.png" className="w-[32px] h-[32px]" />
-            <img src="../../github.png" className="w-[32px] h-[32px]" />
+            <a href="https://github.com/xartokoptiko/lifechain-gr">
+              <img
+                src="../../github.png"
+                className="w-[32px] h-[32px]"
+              />
+            </a>
           </div>
           <p>{t("right")}</p>
         </div>
