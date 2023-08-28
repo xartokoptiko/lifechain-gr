@@ -9,6 +9,7 @@ import {
   Heading,
   FormErrorMessage,
   Text,
+  Toast,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Head from "next/head";
@@ -32,6 +33,44 @@ export default function University() {
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
   const router = useRouter();
+  const [subState, setSubState] = useState({
+    message: "",
+    email: "",
+    loading: false,
+  });
+
+  const emailHandler = (e) => {
+    let updatedEmail = e.target.value;
+    setSubState({ email: updatedEmail });
+  };
+
+  const subscribeUser = async (e) => {
+    setSubState({
+      loading: true,
+    });
+    e.preventDefault();
+    const res = await fetch("/api/subscribe", {
+      body: JSON.stringify({ email: subState.email }),
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      method: "POST",
+    });
+
+    const json_res = await res.json();
+
+    setSubState({
+      message: json_res.message,
+      email: "",
+      loading: false,
+    });
+
+    toast({
+      title: subState.message,
+      status: "success",
+      duration: 2000,
+      position: "top",
+    });
+
+  };
 
   const { values, isLoading, error } = state;
 
@@ -127,7 +166,7 @@ export default function University() {
   return (
     <>
       <Head>
-        <title>Smart Alert University</title>
+        <title>Home</title>
       </Head>
       <main className="flex flex-col w-full">
         {/* START OF HEADER */}
@@ -396,10 +435,8 @@ export default function University() {
 
         <div
           id="gettheapp"
-          className="flex flex-col xl:h-[40vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90% p-10 items-center
-                                      lg:h-[40vh]
-                                      md:h-[20vh]
-                                      max-sm:h-[30vh]"
+          className="flex flex-col bg-gradient-to-br to-redonebg  from-redtwobg via-90% p-10 items-center
+                                      "
         >
           <p className="text-4xl font-extrabold text-white text-center mb-10 max-sm:text-2xl">
             {t("soon")}
@@ -428,6 +465,33 @@ export default function University() {
               <p className="text-xl">App store</p>
             </div>
           </div>
+          <Container maxW="700px" mt={8} textAlign="center" textColor="white">
+            <Heading>Subscribe to our news-letter</Heading>
+            <FormLabel textAlign="center">
+              And get notified when the app is released
+            </FormLabel>
+
+            <FormControl mb={4}>
+              <Input
+                type="email"
+                placeholder="Email"
+                textColor="white"
+                _placeholder={{ color: "white" }}
+                value={subState.email}
+                onChange={emailHandler}
+              />
+            </FormControl>
+
+            <Button
+              alignSelf="start"
+              variant="outline"
+              colorScheme="white"
+              isLoading={subState.loading}
+              onClick={subscribeUser}
+            >
+              Submit
+            </Button>
+          </Container>
         </div>
 
         {/* CONDACT US SECTION */}
@@ -557,10 +621,7 @@ export default function University() {
             <img src="../../twitter.png" className="w-[32px] h-[32px]" />
             <img src="../../facebook.png" className="w-[32px] h-[32px]" />
             <a href="https://github.com/xartokoptiko/lifechain-gr">
-              <img
-                src="../../github.png"
-                className="w-[32px] h-[32px]"
-              />
+              <img src="../../github.png" className="w-[32px] h-[32px]" />
             </a>
           </div>
           <p>{t("right")}</p>
