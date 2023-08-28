@@ -64,7 +64,7 @@ export default function University() {
     });
 
     toast({
-      title: subState.message,
+      title: json_res.message,
       status: "success",
       duration: 2000,
       position: "top",
@@ -300,6 +300,7 @@ export default function University() {
               className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
                                             lg:h-[30vh]
                                             md:h-[25vh]
+                                            max-sm:h-[20vh]
                 rounded-2xl shadow-2xl 
             text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
             >
@@ -319,6 +320,7 @@ export default function University() {
               className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
               lg:h-[30vh]
               md:h-[25vh]
+              max-sm:h-[20vh]
                 rounded-2xl shadow-2xl 
             text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
             >
@@ -340,6 +342,7 @@ export default function University() {
               className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
               lg:h-[30vh]
                                             md:h-[25vh]
+                                            max-sm:h-[20vh]
                 rounded-2xl shadow-2xl 
             text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
             >
@@ -359,6 +362,7 @@ export default function University() {
               className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
               lg:h-[30vh]
                                             md:h-[25vh]
+                                            max-sm:h-[20vh]
                 rounded-2xl shadow-2xl 
             text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
             >

@@ -1,4 +1,4 @@
-import transporter, { mailOptions } from "../../config/nodeemailer";
+import transporter , {mailOptions} from "../../config/nodeemailer"
 
 
 const CONTACT_MESSAGE_FIELDS = {
