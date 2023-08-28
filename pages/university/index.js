@@ -78,17 +78,17 @@ export default function University() {
     {
       title: t("instructions_one_title"),
       text: t("instructions_one_text"),
-      imageSrc: "../../homepage.png",
+      imageSrc: t("homepage"),
     },
     {
       title: t("instructions_two_title"),
       text: t("instructions_two_text"),
-      imageSrc: "../../countdown.png",
+      imageSrc: t("countdown"),
     },
     {
       title: t("instructions_three_title"),
       text: t("instructions_three_text"),
-      imageSrc: "../../buttons.png",
+      imageSrc: t("buttons"),
     },
   ];
 
@@ -279,7 +279,7 @@ export default function University() {
                                           max-sm:w-full"
             >
               <img
-                src="../../homepage.png"
+                src={t("loginpage")}
                 className="w-[172px] h-[373px] rounded-xl shadow-2xl shadow-white"
               />
             </div>
