@@ -244,7 +244,7 @@ export default function University() {
                       </Dropdown.Item>
                       <Dropdown.Item>
                         <Link href="/" locale="gr">
-                          <h2>Ελληνικα</h2>
+                          <h2>Ελληνικά</h2>
                         </Link>
                       </Dropdown.Item>
                     </Dropdown.Menu>
@@ -265,7 +265,7 @@ export default function University() {
                                                       max-sm:w-full"
             >
               <p className="text-5xl text-white font-extrabold max-sm:mb-10">
-                Smart alert University
+                Lifechain University
               </p>
               <div className="flex flex-row w-[300px] h-[10px] rounded-2xl bg-white shadow-lg shadow-white max-sm:mb-10"></div>
               <div className="fjustify-center items-center max-sm:mb-12">
@@ -457,7 +457,7 @@ export default function University() {
                 className="w-[64px] h-[64pxpx]
                            max-sm:w-[32px] max-sm:h-[32px] "
               />
-              <p className="text-xl">Google play</p>
+              <p className="text-xl ml-4">Google play</p>
             </div>
 
             <div className="flex flex-row w-fit text-xl font-extrabold text-white items-center">
@@ -466,13 +466,13 @@ export default function University() {
                 className="w-[64px] h-[64pxpx]
                               max-sm:w-[32px] max-sm:h-[32px]"
               />
-              <p className="text-xl">App store</p>
+              <p className="text-xl ml-4">App store</p>
             </div>
           </div>
           <Container maxW="700px" mt={8} textAlign="center" textColor="white">
-            <Heading>Subscribe to our news-letter</Heading>
-            <FormLabel textAlign="center">
-              And get notified when the app is released
+            <Heading mb={3}>{t("sub")}</Heading>
+            <FormLabel mb={4} textAlign="center">
+              {t("not")}
             </FormLabel>
 
             <FormControl mb={4}>
@@ -493,7 +493,7 @@ export default function University() {
               isLoading={subState.loading}
               onClick={subscribeUser}
             >
-              Submit
+              {t("submit")}
             </Button>
           </Container>
         </div>
