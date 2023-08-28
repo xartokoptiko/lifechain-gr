@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/contact.js", "pages/university/index.js", "config/nodeemailer.js", "pages/components/how-three.js", "pages/components/how-two.js", "pages/components/how-one.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/contact.js", "pages/university/index.js", "config/nodeemailer.tsx", "pages/components/how-three.js", "pages/components/how-two.js", "pages/components/how-one.js"],
   "exclude": ["node_modules"]
 }

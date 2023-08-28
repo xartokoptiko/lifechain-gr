@@ -1,17 +1,19 @@
 import nodemailer from "nodemailer";
 
 const email = process.env.EMAIL;
-const pass = process.env.EMAIL_PASS;
+const passw = process.env.PASS;
 
-export const transporter = nodemailer.createTransport({
-  service: "gmail",
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
   auth: {
-    user: email,
-    pass,
+    user: email, // Replace with your Gmail email
+    pass: passw, // Replace with your Gmail app password
   },
 });
 
 export const mailOptions = {
   from: email,
-  to: email,
+  to: "info@lifechain.gr",
 };
+
+export default transporter;
