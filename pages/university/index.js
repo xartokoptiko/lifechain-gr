@@ -20,6 +20,7 @@ import useTranslation from "next-translate/useTranslation";
 
 import { sendContactForm } from "../../lib/api";
 import { useRouter } from "next/router";
+import MobileApp from "../components/application/mobile-app";
 
 const initValues = { name: "", email: "", subject: "", message: "" };
 
@@ -278,10 +279,13 @@ export default function University() {
               className="flex flex-col w-1/2 items-center justify-center
                                           max-sm:w-full"
             >
-              <img
+              <p className="text-center text-white text-xl font-extrabold mb-5" >Test the app bellow</p>
+              {/* PLACE MOCK UP HERE ! */}
+              <MobileApp />
+              {/* <img
                 src={t("loginpage")}
                 className="w-[172px] h-[373px] rounded-xl shadow-2xl shadow-white"
-              />
+              /> */}
             </div>
           </div>
         </div>
