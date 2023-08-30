@@ -17,7 +17,6 @@ import { Dropdown, Avatar, Grid, User } from "@nextui-org/react";
 import Link from "next/link";
 import InstructionsText from "../components/instructions-text";
 import useTranslation from "next-translate/useTranslation";
-
 import { sendContactForm } from "../../lib/api";
 import { useRouter } from "next/router";
 import MobileApp from "../components/application/mobile-app";

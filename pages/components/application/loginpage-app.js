@@ -15,7 +15,7 @@ export default function LoginPageApp({onNext}) {
         />
         <input placeholder="password" type="text" className="flex p-1 text-root text-xs flex-col w-[120px] h-[30px] border-root border-2 rounded-md mt-[30px]"
         />
-        <button onClick={onNext} className="flex flex-col w-[120px] h-[30px] mt-[30px] text-xs bg-redapp text-white font-extrabold rounded-2xl text-center justify-center" >Log in</button>
+        <button onClick={onNext} className="text-[10px] text-white font-extrabold text-center items-center bg-redapp w-[130px] h-[30px] rounded-2xl mt-[30px]" >Log in</button>
       </div>
     </>
   );
