@@ -1,6 +1,5 @@
 # Lifechain.gr 
 ## The smart way to be safe !
-The official site for the lifechain team under the [apache license 2.0](https://github.com/xartokoptiko/lifechain.gr/blob/master/LICENSE) is open source !
 
 ### Framework and libraries description
 
