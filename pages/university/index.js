@@ -15,11 +15,11 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { Dropdown, Avatar, Grid, User } from "@nextui-org/react";
 import Link from "next/link";
-import InstructionsText from "../components/instructions-text";
+import InstructionsText from "../../components/instructions-text";
 import useTranslation from "next-translate/useTranslation";
 import { sendContactForm } from "../../lib/api";
 import { useRouter } from "next/router";
-import MobileApp from "../components/application/mobile-app";
+import MobileApp from "../../components/application/mobile-app";
 
 const initValues = { name: "", email: "", subject: "", message: "" };
 
@@ -631,6 +631,7 @@ export default function University() {
               <img src="../../github.png" className="w-[32px] h-[32px]" />
             </a>
           </div>
+          <p><a href="http://localhost:3000/privacy">Privacy</a> {"  "} | {"  "} <a href="http://localhost:3000/tou" >Terms Of use</a></p>
           <p>{t("right")}</p>
         </div>
       </main>

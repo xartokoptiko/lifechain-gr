@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/contact.js", "pages/university/index.js", "config/nodeemailer.tsx", "pages/components/how-three.js", "pages/components/how-two.js", "pages/components/how-one.js", "pages/components/application/loginpage-app.js", "pages/components/application/alertpage-app.js", "pages/components/application/healthpage-app.js", "pages/components/application/homepage-app.js", "pages/components/application/mobile-app.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/contact.js", "pages/university/index.js", "config/nodeemailer.tsx", "components/how-three.js", "components/how-two.js", "components/how-one.js", "components/application/loginpage-app.js", "components/application/alertpage-app.js", "components/application/healthpage-app.js", "components/application/homepage-app.js", "components/application/mobile-app.js"],
   "exclude": ["node_modules"]
 }
