@@ -631,7 +631,7 @@ export default function University() {
               <img src="../../github.png" className="w-[32px] h-[32px]" />
             </a>
           </div>
-          <p><a href="http://localhost:3000/privacy">Privacy</a> {"  "} | {"  "} <a href="http://localhost:3000/tou" >Terms Of use</a></p>
+          <p><a href="https://lifechain.gr/privacy">Privacy</a> {"  "} | {"  "} <a href="https://lifechain.gr/tou" >Terms Of use</a></p>
           <p>{t("right")}</p>
         </div>
       </main>
