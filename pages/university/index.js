@@ -278,7 +278,7 @@ export default function University() {
               className="flex flex-col w-1/2 items-center justify-center
                                           max-sm:w-full"
             >
-              <p className="text-center text-white text-xl font-extrabold mb-5" >Test the app bellow</p>
+              <p className="text-center text-white text-xl font-extrabold mb-5" >{t("test")}</p>
               {/* PLACE MOCK UP HERE ! */}
               <MobileApp />
               {/* <img
