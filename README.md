@@ -25,10 +25,6 @@ The easiest way to deploy your Next.js project is from [Vercel](https://vercel.c
 - Lifechain code documantation(Under development)
 
 ### The team
-- Theodoros Asteriotis / Sales & Health Data Analysis
-- Enri Skourti / Cooperations
-- Andreas Krassas / Operation Manager & Marketing
-- Alkinoos Alissandrakis / mobile & backend dev
 - Lampros karachristos / full-stack dev & designer
 
 
