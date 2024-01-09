@@ -21,7 +21,7 @@ import { sendContactForm } from "../../lib/api";
 import { useRouter } from "next/router";
 import MobileApp from "../../components/application/mobile-app";
 
-const initValues = { name: "", email: "", subject: "", message: "" };
+const initValues = { name: "", email: "", subject: "", message: ""  };
 
 const initState = { isLoading: false, error: "", values: initValues };
 
@@ -256,9 +256,10 @@ export default function University() {
 
           {/* FIRST SECTION */}
           <div
-            className="flex flex-row p-10 xl:h-[80vh] shadow-lg shadow-redonebg
-                               max-sm:flex-col lg:h-[70vh]
-                                               md:h-[50vh]"
+            className="flex flex-row px-10 xl:py-[50px] shadow-lg shadow-redonebg
+                               max-sm:flex-col lg:py-[50px]
+                                               md:py-[50px]
+                                               max-sm:py-[25px]"
           >
             <div
               className="flex flex-col text-center w-1/2 items-center justify-evenly text-3xl font-extrabold text-white
@@ -293,12 +294,12 @@ export default function University() {
 
         <div
           id="whatisit"
-          className="flex flex-row max-sm:flex-col xl:h-[100vh] w-full bg-gradient-to-br to-blueshadow  from-white via-90%
-                                                      lg:h-[80vh]
-                                                      md:h-[60vh]
-                                                      max-sm:h-[150vh] max-sm:justify-evenly"
+          className="grid grid-cols-2 gap-[20px] px-[15px] xl:py-[50px] w-full bg-gradient-to-br to-blueshadow  from-white via-90%
+                                                      lg:py-[50px]
+                                                      md:py-[50px]
+                                                      max-sm:py-[25px] max-sm:grid-cols-1"
         >
-          <div className="flex flex-col p-5 items-center justify-evenly w-1/2 max-sm:w-full max-sm:h-1/2 max-sm:justify-evenly">
+          
             <div
               className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
                                             lg:h-[30vh]
@@ -338,9 +339,9 @@ export default function University() {
                 <p>{t("info_two_two")}</p>
               </div>
             </div>
-          </div>
+          
 
-          <div className="flex flex-col p-5 items-center justify-evenly w-1/2 max-sm:w-full max-sm:h-1/2">
+          
             <div
               className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
               lg:h-[30vh]
@@ -381,22 +382,22 @@ export default function University() {
               </div>
             </div>
           </div>
-        </div>
 
         {/* THIRD SECTION */}
 
         <div
-          className="flex flex-col xl:h-[90vh] p-10
-                                      lg:h-[95vh]
-                                      md:h-[50vh]"
+          className="flex flex-col xl:py-[50px] px-10
+                                      lg:py-[50px]
+                                      md:py-[50px]
+                                      max-sm:py-[25px]"
         >
           <p className="text-4xl font-extrabold text-redonebg text-center mb-12">
             {t("works")}
           </p>
           <div
             id="howitworks"
-            className="flex flex-row h-full justify-evenly
-                               max-sm:flex-col"
+            className="grid grid-cols-3 w-full justify-evenly
+                               max-sm:grid-cols-1"
           >
             <div className="flex flex-col justify-center items-center">
               <img
@@ -607,10 +608,11 @@ export default function University() {
 
         {/* FOOTER SECTION */}
         <div
-          className="flex flex-col items-center justify-evenly text-center text-white xl:h-[50vh] text-xs font-extrabold
-        bg-gradient-to-br to-redonebg  from-redtwobg via-90%                        lg:h-[40vh]
-                                                                                        md:h-[20vh]
-                                                                                        max-sm:h-[30vh]"
+          className="flex flex-col items-center text-center text-white xl:py-[50px] text-xs font-extrabold
+        bg-gradient-to-br to-redonebg  from-redtwobg via-90%                        lg:py-[50px]
+                                                                                        md:py-[50px]
+                                                                                        max-sm:py-[25px]
+                                                                                        space-y-[20px]"
         >
           <p>Lifechain university</p>
           <p>Email : info@lifechain.gr</p>
