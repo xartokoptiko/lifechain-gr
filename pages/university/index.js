@@ -21,7 +21,7 @@ import { sendContactForm } from "../../lib/api";
 import { useRouter } from "next/router";
 import MobileApp from "../../components/application/mobile-app";
 
-const initValues = { name: "", email: "", subject: "", message: ""  };
+const initValues = { name: "", email: "", subject: "", message: "" };
 
 const initState = { isLoading: false, error: "", values: initValues };
 
@@ -69,7 +69,6 @@ export default function University() {
       duration: 2000,
       position: "top",
     });
-
   };
 
   const { values, isLoading, error } = state;
@@ -166,7 +165,7 @@ export default function University() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Lifechain University</title>
       </Head>
       <main className="flex flex-col w-full">
         {/* START OF HEADER */}
@@ -279,7 +278,9 @@ export default function University() {
               className="flex flex-col w-1/2 items-center justify-center
                                           max-sm:w-full"
             >
-              <p className="text-center text-white text-xl font-extrabold mb-5" >{t("test")}</p>
+              <p className="text-center text-white text-xl font-extrabold mb-5">
+                {t("test")}
+              </p>
               {/* PLACE MOCK UP HERE ! */}
               <MobileApp />
               {/* <img
@@ -299,89 +300,86 @@ export default function University() {
                                                       md:py-[50px]
                                                       max-sm:py-[25px] max-sm:grid-cols-1"
         >
-          
-            <div
-              className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
+          <div
+            className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
                                             lg:h-[30vh]
                                             md:h-[25vh]
                                             max-sm:h-[20vh]
                 rounded-2xl shadow-2xl 
             text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
-            >
-              <img
-                src="../../warning.png"
-                className="w-[64px] h-[64px]
+          >
+            <img
+              src="../../warning.png"
+              className="w-[64px] h-[64px]
                            max-sm:w-[32px] max-sm:h-[32px]"
-              />
+            />
 
-              <div className="flex flex-col">
-                <p>{t("info_one_one")}</p>
-                <p>{t("info_one_two")}</p>
-              </div>
+            <div className="flex flex-col">
+              <p>{t("info_one_one")}</p>
+              <p>{t("info_one_two")}</p>
             </div>
+          </div>
 
-            <div
-              className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
+          <div
+            className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
               lg:h-[30vh]
               md:h-[25vh]
               max-sm:h-[20vh]
                 rounded-2xl shadow-2xl 
             text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
-            >
-              <img
-                src="../../phone.png"
-                className="w-[64px] h-[64px]
+          >
+            <img
+              src="../../phone.png"
+              className="w-[64px] h-[64px]
                                                       max-sm:w-[32px] max-sm:h-[32px]"
-              />
+            />
 
-              <div className="flex flex-col">
-                <p>{t("info_two_one")}</p>
-                <p>{t("info_two_two")}</p>
-              </div>
-            </div>
-          
-
-          
-            <div
-              className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
-              lg:h-[30vh]
-                                            md:h-[25vh]
-                                            max-sm:h-[20vh]
-                rounded-2xl shadow-2xl 
-            text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
-            >
-              <img
-                src="../../map.png"
-                className="w-[64px] h-[64px]
-                                                      max-sm:w-[32px] max-sm:h-[32px]"
-              />
-
-              <div className="flex flex-col">
-                <p>{t("info_three_one")}</p>
-                <p>{t("info_three_two")}</p>
-              </div>
-            </div>
-
-            <div
-              className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
-              lg:h-[30vh]
-                                            md:h-[25vh]
-                                            max-sm:h-[20vh]
-                rounded-2xl shadow-2xl 
-            text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
-            >
-              <img
-                src="../../help.png"
-                className="w-[64px] h-[64px]
-                                                      max-sm:w-[32px] max-sm:h-[32px]"
-              />
-
-              <div className="flex flex-col">
-                <p>{t("info_four_one")}</p>
-                <p>{t("info_four_two")}</p>
-              </div>
+            <div className="flex flex-col">
+              <p>{t("info_two_one")}</p>
+              <p>{t("info_two_two")}</p>
             </div>
           </div>
+
+          <div
+            className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
+              lg:h-[30vh]
+                                            md:h-[25vh]
+                                            max-sm:h-[20vh]
+                rounded-2xl shadow-2xl 
+            text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
+          >
+            <img
+              src="../../map.png"
+              className="w-[64px] h-[64px]
+                                                      max-sm:w-[32px] max-sm:h-[32px]"
+            />
+
+            <div className="flex flex-col">
+              <p>{t("info_three_one")}</p>
+              <p>{t("info_three_two")}</p>
+            </div>
+          </div>
+
+          <div
+            className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
+              lg:h-[30vh]
+                                            md:h-[25vh]
+                                            max-sm:h-[20vh]
+                rounded-2xl shadow-2xl 
+            text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
+          >
+            <img
+              src="../../help.png"
+              className="w-[64px] h-[64px]
+                                                      max-sm:w-[32px] max-sm:h-[32px]"
+            />
+
+            <div className="flex flex-col">
+              <p>{t("info_four_one")}</p>
+              <p>{t("info_four_two")}</p>
+            </div>
+          </div>
+        </div>
 
         {/* THIRD SECTION */}
 
@@ -633,7 +631,10 @@ export default function University() {
               <img src="../../github.png" className="w-[32px] h-[32px]" />
             </a>
           </div>
-          <p><a href="https://lifechain.gr/privacy">Privacy</a> {"  "} | {"  "} <a href="https://lifechain.gr/tou" >Terms Of use</a></p>
+          <p>
+            <a href="https://lifechain.gr/privacy">Privacy</a> {"  "} | {"  "}{" "}
+            <a href="https://lifechain.gr/tou">Terms Of use</a>
+          </p>
           <p>{t("right")}</p>
         </div>
       </main>

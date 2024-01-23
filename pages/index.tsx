@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useState } from "react";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,9 +11,11 @@ export default function Home() {
     setIsHidden(!isHidden);
   };
 
-
   return (
     <>
+      <Head>
+        <title>Lifechain</title>
+      </Head>
       <div
         className="flex flex-col w-full bg-cover"
         style={{ backgroundImage: "url(athens.jpg)" }}
@@ -27,7 +29,7 @@ export default function Home() {
           <div className="flex flex-row w-full items-center justify-between text-white text-md font-extrabold">
             <div className="flex flex-row items-center space-x-6">
               <a href="/university">University</a>
-              <a>Travel</a>
+              <a href="/travel">Travel</a>
               <a>About us</a>
             </div>
             <p className="px-[10px] py-[15px] rounded-xl bg-white bg-opacity-80 text-blue-900 cursor-pointer">
@@ -53,7 +55,7 @@ export default function Home() {
               />
 
               <div
-                className={`${isHidden ? 'hidden' : ''} absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+                className={`${isHidden ? "hidden" : ""} absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"
