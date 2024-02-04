@@ -187,7 +187,12 @@ export default function University() {
                   {t("menu_contact")}
                 </a>
               </div>
-              <div className=" flex flex-row flex-1 justify-end">
+              <div className=" flex flex-row flex-1 space-x-[15px] justify-end">
+
+              <a href="/login" className="bg-gradient-to-br to-blueshadow cursor-pointer from-white via-90% rounded-2xl shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden ">
+                  Login
+                </a>
+
                 <button
                   onClick={scrollToElementApp}
                   className="bg-gradient-to-br to-blueshadow  from-white via-90% rounded-2xl shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden "
@@ -230,7 +235,7 @@ export default function University() {
                 <div>
                   <Dropdown>
                     <Dropdown.Trigger>
-                      <button className=" ml-3 rounded-full p-3 bg-gradient-to-br to-blueshadow  from-white via-90% shadow-2xl ">
+                      <button className="rounded-full p-3 bg-gradient-to-br to-blueshadow  from-white via-90% shadow-2xl ">
                         <p className=" font-extrabold text-redonebg">
                           {t("lang")}
                         </p>
