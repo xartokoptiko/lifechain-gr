@@ -60,7 +60,7 @@ export default function Deleteaccount() {
                 <title>Delete Lifechain account</title>
             </Head>
             <div className="flex flex-col w-full space-y-[20px] h-screen items-center justify-center bg-gradient-to-br to-redonebg  from-redtwobg via-90%" > 
-                <p className="text-white text-lg font-extrabold">By pressing the following button you can delete your lifechain account perminantly</p>
+                <p className="text-white text-lg font-extrabold">By pressing the following button you can delete your lifechain account permanently</p>
                 <button onClick={handleDelete} className="bg-white rounded-lg text-redonebg px-[30px] py-[10px] font-extrabold">Delete my account</button>
             </div>
         </>
