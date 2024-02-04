@@ -11,7 +11,6 @@ export default function Deleteaccount() {
         const fetchData = async () => {
           try {
             const userData = await getUserData();
-            setUser(userData);
           } catch (error) {
             router.push(
               {
