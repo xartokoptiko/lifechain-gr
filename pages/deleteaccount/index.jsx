@@ -2,26 +2,31 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import {deleteAccount} from "../../firebase";
 import { useEffect, useState } from "react";
-import {getUserData} from "../../firebase";
+import {isUserLoggedIn} from "../../firebase";
 
 export default function Deleteaccount() {
     const router = useRouter();
 
     useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const userData = await getUserData();
-          } catch (error) {
-            router.push(
-              {
-                pathname: "/login",
-                query: { data: "error" }
-              }
-            );
-          }
+        const checkUser = async () => {
+            await isUserLoggedIn()
+            .then((isLoggedIn) => {
+                console.log(isLoggedIn);
+                if (isLoggedIn === false) {
+                    router.push({
+                        pathname: "/login",
+                        query: { data: "error" }
+                    });
+                }
+            }).catch((error) => {
+                router.push({
+                    pathname: "/login",
+                    query: { data: "error" }
+                });
+            });
         };
     
-        fetchData();
+        checkUser();
       }, []);
 
     const handleDelete = async (e) => {

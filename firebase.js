@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { getApp, initializeApp  } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
-import { getAuth, signInWithEmailAndPassword , deleteUser} from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword , deleteUser, onAuthStateChanged} from "firebase/auth";
 import { getFirestore, doc, getDoc, deleteDoc } from 'firebase/firestore';
 import { browserSessionPersistence, setPersistence } from "firebase/auth";
 
@@ -96,3 +96,22 @@ export const deleteAccount = async (password) => {
   }
 
 };
+
+export async function isUserLoggedIn() {
+  const auth = getAuth();
+
+  return new Promise((resolve, reject) => {
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+              // User is logged in
+              resolve(true);
+          } else {
+              // No user is logged in
+              resolve(false);
+          }
+      }, (error) => {
+          // An error occurred while checking authentication state
+          reject(error);
+      });
+  });
+}
