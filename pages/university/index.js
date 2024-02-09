@@ -20,8 +20,10 @@ import useTranslation from "next-translate/useTranslation";
 import { sendContactForm } from "../../lib/api";
 import { useRouter } from "next/router";
 import MobileApp from "../../components/application/mobile-app";
+import Youtube from "react-youtube";
+import YouTube from "react-youtube";
 
-const initValues = { name: "", email: "", subject: "", message: ""  };
+const initValues = { name: "", email: "", subject: "", message: "" };
 
 const initState = { isLoading: false, error: "", values: initValues };
 
@@ -189,7 +191,7 @@ export default function University() {
               </div>
               <div className=" flex flex-row flex-1 space-x-[15px] justify-end">
 
-              <a href="/login" className="bg-gradient-to-br to-blueshadow cursor-pointer from-white via-90% rounded-2xl shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden ">
+                <a href="/login" className="bg-gradient-to-br to-blueshadow cursor-pointer from-white via-90% rounded-2xl shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden ">
                   Login
                 </a>
 
@@ -296,7 +298,18 @@ export default function University() {
         </div>
 
         {/* SECOND SECTION */}
-
+        <div className="flex flex-col w-full py-[40px] items-center justify-center">
+          <div className="w-[600px] h-[400px] max-sm:w-[300px] max-sm:h-[200px]">
+            <iframe
+              className="w-full h-full"
+              src={"https://www.youtube.com/embed/QcmhiyIaV2o"}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
         <div
           id="whatisit"
           className="grid grid-cols-2 gap-[20px] px-[15px] xl:py-[50px] w-full bg-gradient-to-br to-blueshadow  from-white via-90%
@@ -304,89 +317,89 @@ export default function University() {
                                                       md:py-[50px]
                                                       max-sm:py-[25px] max-sm:grid-cols-1"
         >
-          
-            <div
-              className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
+
+          <div
+            className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
                                             lg:h-[30vh]
                                             md:h-[25vh]
                                             max-sm:h-[20vh]
                 rounded-2xl shadow-2xl 
             text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
-            >
-              <img
-                src="../../warning.png"
-                className="w-[64px] h-[64px]
+          >
+            <img
+              src="../../warning.png"
+              className="w-[64px] h-[64px]
                            max-sm:w-[32px] max-sm:h-[32px]"
-              />
+            />
 
-              <div className="flex flex-col">
-                <p>{t("info_one_one")}</p>
-                <p>{t("info_one_two")}</p>
-              </div>
+            <div className="flex flex-col">
+              <p>{t("info_one_one")}</p>
+              <p>{t("info_one_two")}</p>
             </div>
+          </div>
 
-            <div
-              className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
+          <div
+            className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
               lg:h-[30vh]
               md:h-[25vh]
               max-sm:h-[20vh]
                 rounded-2xl shadow-2xl 
             text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
-            >
-              <img
-                src="../../phone.png"
-                className="w-[64px] h-[64px]
+          >
+            <img
+              src="../../phone.png"
+              className="w-[64px] h-[64px]
                                                       max-sm:w-[32px] max-sm:h-[32px]"
-              />
+            />
 
-              <div className="flex flex-col">
-                <p>{t("info_two_one")}</p>
-                <p>{t("info_two_two")}</p>
-              </div>
-            </div>
-          
-
-          
-            <div
-              className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
-              lg:h-[30vh]
-                                            md:h-[25vh]
-                                            max-sm:h-[20vh]
-                rounded-2xl shadow-2xl 
-            text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
-            >
-              <img
-                src="../../map.png"
-                className="w-[64px] h-[64px]
-                                                      max-sm:w-[32px] max-sm:h-[32px]"
-              />
-
-              <div className="flex flex-col">
-                <p>{t("info_three_one")}</p>
-                <p>{t("info_three_two")}</p>
-              </div>
-            </div>
-
-            <div
-              className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
-              lg:h-[30vh]
-                                            md:h-[25vh]
-                                            max-sm:h-[20vh]
-                rounded-2xl shadow-2xl 
-            text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
-            >
-              <img
-                src="../../help.png"
-                className="w-[64px] h-[64px]
-                                                      max-sm:w-[32px] max-sm:h-[32px]"
-              />
-
-              <div className="flex flex-col">
-                <p>{t("info_four_one")}</p>
-                <p>{t("info_four_two")}</p>
-              </div>
+            <div className="flex flex-col">
+              <p>{t("info_two_one")}</p>
+              <p>{t("info_two_two")}</p>
             </div>
           </div>
+
+
+
+          <div
+            className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
+              lg:h-[30vh]
+                                            md:h-[25vh]
+                                            max-sm:h-[20vh]
+                rounded-2xl shadow-2xl 
+            text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
+          >
+            <img
+              src="../../map.png"
+              className="w-[64px] h-[64px]
+                                                      max-sm:w-[32px] max-sm:h-[32px]"
+            />
+
+            <div className="flex flex-col">
+              <p>{t("info_three_one")}</p>
+              <p>{t("info_three_two")}</p>
+            </div>
+          </div>
+
+          <div
+            className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
+              lg:h-[30vh]
+                                            md:h-[25vh]
+                                            max-sm:h-[20vh]
+                rounded-2xl shadow-2xl 
+            text-white text-2xl font-extrabold text-center max-sm:text-lg items-center justify-evenly w-full"
+          >
+            <img
+              src="../../help.png"
+              className="w-[64px] h-[64px]
+                                                      max-sm:w-[32px] max-sm:h-[32px]"
+            />
+
+            <div className="flex flex-col">
+              <p>{t("info_four_one")}</p>
+              <p>{t("info_four_two")}</p>
+            </div>
+          </div>
+        </div>
 
         {/* THIRD SECTION */}
 
@@ -638,7 +651,7 @@ export default function University() {
               <img src="../../github.png" className="w-[32px] h-[32px]" />
             </a>
           </div>
-          <p><a href="https://lifechain.gr/privacy">Privacy</a> {"  "} | {"  "} <a href="https://lifechain.gr/tou" >Terms Of use</a></p>
+          <p><a href="/privacy">Privacy</a> {"  "} | {"  "} <a href="/tou" >Terms Of use</a></p>
           <p>{t("right")}</p>
         </div>
       </main>
