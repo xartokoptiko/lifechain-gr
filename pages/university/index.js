@@ -20,8 +20,6 @@ import useTranslation from "next-translate/useTranslation";
 import { sendContactForm } from "../../lib/api";
 import { useRouter } from "next/router";
 import MobileApp from "../../components/application/mobile-app";
-import Youtube from "react-youtube";
-import YouTube from "react-youtube";
 
 const initValues = { name: "", email: "", subject: "", message: "" };
 
@@ -175,7 +173,9 @@ export default function University() {
           <div>
             <div className="flex flex-row p-8 items-center w-screen">
               <div className="flex flex-row items-center">
-                <img src="../../logo.png" className="w-[200px] h-[80px]" />
+                <Link href="/">
+                  <img src="../../logo.png" className="w-[200px] h-[80px]" />
+                </Link>
               </div>
               <div className="flex flex-row items-center ml-14 text-white text-lg font-bold max-sm:hidden">
                 <a className="mr-5" onClick={scrollToElementWhat} href="#">
@@ -190,13 +190,13 @@ export default function University() {
               </div>
               <div className=" flex flex-row flex-1 space-x-[15px] justify-end">
 
-                <a href="/login" className="bg-gradient-to-br to-blueshadow cursor-pointer from-white via-90% rounded-2xl shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden ">
+                <a href="/login" className="bg-gradient-to-br to-blueshadow cursor-pointer from-white via-90% rounded-lg shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden ">
                   Login
                 </a>
 
                 <button
                   onClick={scrollToElementApp}
-                  className="bg-gradient-to-br to-blueshadow  from-white via-90% rounded-2xl shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden "
+                  className="bg-gradient-to-br to-blueshadow  from-white via-90% rounded-lg shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden "
                 >
                   {t("menu_get")}
                 </button>

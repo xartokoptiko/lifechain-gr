@@ -32,7 +32,7 @@ export default function Home() {
               <a href="/travel">Travel</a>
               <a>About us</a>
             </div>
-            <p className="px-[10px] py-[15px] rounded-xl bg-white bg-opacity-80 text-blue-900 cursor-pointer">
+            <p className="px-[10px] py-[15px] rounded-lg bg-white bg-opacity-80 text-blue-900 cursor-pointer">
               Become a responder
             </p>
           </div>
@@ -257,8 +257,8 @@ export default function Home() {
       >
         <p>Lifechain university</p>
         <p>Email : info@lifechain.gr</p>
-        <p>
-          this site is open source ! Find it on github
+        <p> 
+          this site is open source ! Find it on {" "}
           <a href="https://github.com/xartokoptiko/lifechain-gr">github</a>
         </p>
         <div
