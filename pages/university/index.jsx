@@ -303,11 +303,11 @@ export default function University() {
           <div className="w-[600px] h-[400px] max-sm:w-[300px] max-sm:h-[200px]">
             <iframe
               className="w-full h-full"
-              src={"https://www.youtube.com/embed/QcmhiyIaV2o"}
+              src={t("youtube")}
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
@@ -652,7 +652,7 @@ export default function University() {
               <img src="../../github.png" className="w-[32px] h-[32px]" />
             </a>
           </div>
-          <p><a href="/privacy">Privacy</a> {"  "} | {"  "} <a href="/tou" >Terms Of use</a></p>
+          <p><a href="/privacy">{t("privacy")}</a> {"  "} | {"  "} <a href="/tou" >{t("tou")}</a></p>
           <p>{t("right")}</p>
         </div>
       </main>

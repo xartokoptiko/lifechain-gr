@@ -327,7 +327,7 @@ export default function Home() {
             <img src="../../github.png" className="w-[32px] h-[32px]" />
           </a>
         </div>
-        <p><a href="/privacy">Privacy</a> {"  "} | {"  "} <a href="/tou" >Terms Of use</a></p>
+        <p><a href="/privacy">{t("privacy")}</a> {"  "} | {"  "} <a href="/tou" >{t("tou")}</a></p>
         <p>{t("right")}</p>
       </div>
     </>
