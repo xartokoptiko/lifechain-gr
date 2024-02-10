@@ -124,6 +124,37 @@ export default function Travel() {
     }
   };
 
+  const scroll2El = (elID) => {
+    window.scrollTo({
+      top: document.getElementById(elID).offsetTop - 60,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToElementWhat = (e) => {
+    setTimeout(() => {
+      scroll2El("whatisit");
+    }, 100);
+  };
+
+  const scrollToElementHow = (e) => {
+    setTimeout(() => {
+      scroll2El("howitworks");
+    }, 100);
+  };
+
+  const scrollToElementContact = (e) => {
+    setTimeout(() => {
+      scroll2El("contactus");
+    }, 100);
+  };
+
+  const scrollToElementApp = (e) => {
+    setTimeout(() => {
+      scroll2El("gettheapp");
+    }, 100);
+  };
+
   return (
     <>
       <Head>
@@ -135,47 +166,79 @@ export default function Travel() {
             <img src="logo.png" className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]" />
           </Link>
           <div className="flex flex-row w-full justify-between items-center text-extrabold text-white ">
-            <div className="flex flex-row space-x-5 font-extrabold text-white ">
-              <a href="#">{t("menu_what")}</a>
-              <a href="#">{t("menu_how")}</a>
+            <div className="flex flex-row space-x-5 font-extrabold text-white max-sm:hidden">
+              <a onClick={scrollToElementWhat} href="#">{t("menu_what")}</a>
+              <a onClick={scrollToElementHow} href="#">{t("menu_how")}</a>
               {/* <a href="#">Travel agences</a> */}
-              <a href="#">{t("menu_contact")}</a>
+              <a onClick={scrollToElementContact} href="#">{t("menu_contact")}</a>
             </div>
-            <div className="flex flex-row space-x-4 items-center">
-              <p className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl">
+            <div className="flex flex-row space-x-4 items-center max-sm:hidden">
+              <p onClick={scrollToElementApp} className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl">
                 {t("menu_get")}
               </p>
               <p className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl">
                 Login
               </p>
-              <div>
-                <Dropdown>
-                  <Dropdown.Trigger>
-                    <button className="rounded-full p-3 bg-white shadow-2xl ">
-                      <p className=" font-extrabold text-redonebg">
-                        {t("lang")}
-                      </p>
-                    </button>
-                  </Dropdown.Trigger>
-                  <Dropdown.Menu>
-                    <Dropdown.Item>
-                      <Link href="/travel" locale="en">
-                        <h2>English</h2>
-                      </Link>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <Link href="/travel" locale="gr">
-                        <h2>Ελληνικά</h2>
-                      </Link>
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
+
+            </div>
+            <div>
+              <Dropdown>
+                <Dropdown.Trigger>
+                  <button className="rounded-full p-3 bg-white shadow-2xl ">
+                    <p className=" font-extrabold text-redonebg">
+                      {t("lang")}
+                    </p>
+                  </button>
+                </Dropdown.Trigger>
+                <Dropdown.Menu>
+                  <Dropdown.Item>
+                    <Link href="/travel" locale="en">
+                      <h2>English</h2>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link href="/travel" locale="gr">
+                      <h2>Ελληνικά</h2>
+                    </Link>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
+            <div className=" xl:hidden lg:hidden md:hidden">
+              <Dropdown>
+                <Dropdown.Trigger>
+                  <Avatar src="../../menu.png" />
+                </Dropdown.Trigger>
+                <Dropdown.Menu>
+                  <Dropdown.Item>
+                    <Text onClick={scrollToElementWhat}>
+                      {t("menu_what")}
+                    </Text>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item>
+                    <Text onClick={scrollToElementHow}>
+                      {t("menu_how")}
+                    </Text>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Text onClick={scrollToElementContact}>
+                      {t("menu_contact")}
+                    </Text>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item>
+                    <Text onClick={scrollToElementApp}>
+                      {t("menu_get")}
+                    </Text>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
         </div>
-        <div className="flex flex-row px-[25px] py-[40px] w-full">
-          <div className="flex flex-col w-1/2 items-center justify-center space-y-10">
+        <div className="flex flex-row px-[25px] py-[40px] w-full max-sm:flex-col">
+          <div className="flex flex-col w-1/2 items-center justify-center space-y-10 max-sm:w-full">
             <p className="text-4xl text-white font-extrabold">
               Life Chain Travel
             </p>
@@ -187,7 +250,7 @@ export default function Travel() {
               {t("travel_catch_two")}
             </p>
           </div>
-          <div className="flex flex-col w-1/2 items-center justify-center">
+          <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full max-sm:mt-[20px]">
             <img
               src="/privateapp/privatehome.png"
               className="w-[160px] h-[350px] shadow-white shadow-2xl rounded-lg"
@@ -195,21 +258,21 @@ export default function Travel() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row bg-white w-full px-[25px] py-[100px]">
-        <div className="flex flex-col w-1/2 items-center justify-center">
+      <div id="whatisit" className=" flex flex-row bg-white w-full px-[25px] py-[100px] max-sm:flex-col">
+        <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
           <img
             src="/privateapp/privatemore.png"
             className="w-[160px] h-[350px] shadow-redonebg shadow-2xl rounded-lg"
           />
         </div>
-        <div className="flex flex-col w-1/2 items-center">
+        <div className="flex flex-col w-1/2 items-center max-sm:w-full max-sm:mt-[40px]">
           <p className="text-3xl text-[#424242] font-extrabold text-center pb-[20px]">
             {t("travel_catch_app_one")}
             <br />
             {t("travel_catch_app_two")}
           </p>
           <p className="text-lg font-extrabold text-[#424242] mt-[15px] lg:font-bold md:font-bold">
-          {t("travel_catch_app_three")}
+            {t("travel_catch_app_three")}
           </p>
           <div className="flex flex-col w-full lg:max-w-[300px] md:max-w-[300px] max-sm:px-[10px] max-sm:items-center">
             <div className="space-y-3 mt-[25px]">
@@ -252,7 +315,7 @@ export default function Travel() {
         </div>
       </div>
 
-      <div
+      <div id="howitworks"
         className="flex flex-col xl:py-[50px] px-10
                                       lg:py-[50px]
                                       md:py-[50px]
@@ -337,7 +400,7 @@ export default function Travel() {
             <p className="text-xl ml-4">App store</p>
           </div>
         </div>
-        <Container maxW="700px" mt={8} textAlign="center" textColor="white">
+        <Container  id="contactus" maxW="700px" mt={8} textAlign="center" textColor="white">
           <Heading mb={3}>{t("sub")}</Heading>
           <FormLabel mb={4} textAlign="center">
             {t("not")}

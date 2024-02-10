@@ -171,7 +171,7 @@ export default function University() {
         {/* START OF HEADER */}
         <div className="flex flex-col bg-gradient-to-br to-redonebg  from-redtwobg via-90%">
           <div>
-            <div className="flex flex-row p-8 items-center w-screen">
+            <div className="flex flex-row p-8 items-center w-full">
               <div className="flex flex-row items-center">
                 <Link href="/">
                   <img src="../../logo.png" className="w-[200px] h-[80px]" />
@@ -228,6 +228,12 @@ export default function University() {
                         <Text onClick={scrollToElementApp}>
                           {t("menu_get")}
                         </Text>
+                      </Dropdown.Item>
+
+                      <Dropdown.Item>
+                        <Link href={"/login"}>
+                          Login
+                        </Link>
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
