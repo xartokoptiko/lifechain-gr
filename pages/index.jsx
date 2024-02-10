@@ -100,20 +100,12 @@ export default function Home() {
                       {t("uni")}
                     </a>
                     <a
-                      href="#"
+                      href="/travel"
                       className="text-gray-700 block px-4 py-2 text-sm"
                       role="menuitem"
                       id="menu-item-1"
                     >
                       {t("trav")}
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-700 block px-4 py-2 text-sm"
-                      role="menuitem"
-                      id="menu-item-2"
-                    >
-                      About us
                     </a>
                     <a
                       href="#"
