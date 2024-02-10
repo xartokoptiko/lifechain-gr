@@ -38,5 +38,33 @@
     "homepage" : "../../homepage_en.png",
     "countdown" : "../../countdown_en.png",
     "buttons" : "../../buttons_en.png",
-    "test" : "Test the app bellow"
+    "test" : "Test the app bellow",
+
+    
+    "catchphrase" : "The ultimate greek safety app for everyone",
+    "uni" : "University",
+    "trav" : "Travel",
+    "responder" : "Become a reponder",
+    "app_one" : "An application developed to keep you safe",
+    "app_two" : "Everywhere every time",
+    "app_three" : "With just one click",
+    "uni_app_catch" : "From students to students",
+    "uni_app_one" :"Alert university guards for every emergency",
+    "uni_app_two" : "Student responders with CPR Certificate",
+    "uni_app_three" : "Call emergency numbers instantly",
+    "uni_app_four" : "Fast help response",
+    "uni_app_five" : "Easy for everyone to use",
+    "learn" : "Learn more",
+
+    "trav_app_catch" : "For a safe trip",
+    "trav_app_one" :"Alert the travel guide for every emergency",
+    "trav_app_two" : "Usefull words and phrases in the local language",
+    "trav_app_three" : "Keep track of the trip schedule",
+    "trav_app_four" : "Explore local hot destinations",
+    "trav_app_five" : "Embassy and other importand numbers",
+
+    "mission" : "Our mission",
+    "mission_all" : "Our mission is to make life among university students and poeple traveling feel safe wherever they go , experiencing day to day task without stress and get the help they need as easy and fast as possible",
+    "stop" : "But why stop there ?",
+    "lifechain_mission" : "Let's make lifechain everything about life"
 }
