@@ -67,18 +67,18 @@ export default function Travel() {
   const stepContent = [
     {
       title: "Press the SOS button",
-      text: "instructions_one_text",
-      imageSrc: "someimage1",
+      text: "press the sos button when you need help",
+      imageSrc: "/privateapp/privatehome.png",
     },
     {
-      title: "Provide the {} some information",
-      text: "Provid the {} some aditional information like photos or medicine that you might need",
-      imageSrc: "someimage2",
+      title: "2) Click the Ask for 'Help button'",
+      text: "Optionally, you can add more information and upload a photo of the incident",
+      imageSrc: "../../countdown_en.png",
     },
     {
-      title: "Now wait, Help is comming!",
-      text: "Just wait till the countdown finish and the help will be on the way",
-      imageSrc: "someimage3",
+      title: "3) Keep calm, help is on the way !",
+      text: "As soon as the guide receives your signal, the corresponding message will appear on your screen and he will soon be at your location to help you",
+      imageSrc: "../../buttons_en.png",
     },
   ];
 
