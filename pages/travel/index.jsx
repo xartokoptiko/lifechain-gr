@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import useTranslation from "next-translate/useTranslation";
 import { Dropdown, Avatar, Grid, User } from "@nextui-org/react";
+import { sendContactForm } from "@/lib/api";
 
 const initValues = { name: "", email: "", subject: "", message: "" };
 
@@ -237,9 +238,9 @@ export default function Travel() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row px-[25px] py-[40px] w-full max-sm:flex-col">
+        <div className="flex flex-row px-[25px] py-[40px] w-full max-sm:flex-col 2xl:py-[120px]">
           <div className="flex flex-col w-1/2 items-center justify-center space-y-10 max-sm:w-full">
-            <p className="text-4xl text-white font-extrabold">
+            <p className="text-4xl text-white font-extrabold 2xl:text-5xl">
               Life Chain Travel
             </p>
             <div className="flex flex-col w-[300px] h-[5px] bg-white shadow-white shadow-3xl rounded-full"></div>
@@ -253,19 +254,19 @@ export default function Travel() {
           <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full max-sm:mt-[20px]">
             <img
               src="/privateapp/privatehome.png"
-              className="w-[160px] h-[350px] shadow-white shadow-2xl rounded-lg"
+              className="w-[160px] h-[350px] shadow-white shadow-2xl rounded-lg 2xl:w-[210px] 2xl:h-[450px]"
             />
           </div>
         </div>
       </div>
-      <div id="whatisit" className=" flex flex-row bg-white w-full px-[25px] py-[100px] max-sm:flex-col">
+      <div id="whatisit" className=" flex flex-row bg-white w-full px-[25px] py-[100px] max-sm:flex-col 2xl:py-[120px]">
         <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
           <img
             src="/privateapp/privatemore.png"
-            className="w-[160px] h-[350px] shadow-redonebg shadow-2xl rounded-lg"
+            className="w-[160px] h-[350px] shadow-redonebg shadow-2xl rounded-lg 2xl:w-[210px] 2xl:h-[450px]"
           />
         </div>
-        <div className="flex flex-col w-1/2 items-center max-sm:w-full max-sm:mt-[40px]">
+        <div className="flex flex-col w-1/2 items-center max-sm:w-full max-sm:mt-[40px] 2xl:py-[120px]">
           <p className="text-3xl text-[#424242] font-extrabold text-center pb-[20px]">
             {t("travel_catch_app_one")}
             <br />
@@ -319,13 +320,12 @@ export default function Travel() {
         className="flex flex-col xl:py-[50px] px-10
                                       lg:py-[50px]
                                       md:py-[50px]
-                                      max-sm:py-[25px]"
+                                      max-sm:py-[25px] 2xl:py-[80px]"
       >
         <p className="text-4xl font-extrabold text-redonebg text-center mb-12">
           {t("works")}
         </p>
         <div
-          id="howitworks"
           className="grid grid-cols-3 w-full justify-evenly
                                max-sm:grid-cols-1"
         >
@@ -335,7 +335,7 @@ export default function Travel() {
               className="xl:w-[172px] xl:h-[373px] rounded-xl shadow-2xl shadow-redonebg
                            lg:w-[172px] lg:h-[373px]
                            md:w-[155px] md:h-[300px]
-                           max-sm:w-[155px] max-sm:h-[300px] max-sm:mb-12"
+                           max-sm:w-[155px] max-sm:h-[300px] max-sm:mb-12 2xl:w-[210px] 2xl:h-[450px]"
             />
           </div>
 
@@ -370,7 +370,7 @@ export default function Travel() {
       </div>
       <div
         id="gettheapp"
-        className="flex flex-col bg-gradient-to-br to-redonebg  from-redtwobg via-90% p-10 items-center
+        className="flex flex-col bg-gradient-to-br to-redonebg  from-redtwobg via-90% p-10 items-center 2xl:py-[80px]
                                       "
       >
         <p className="text-4xl font-extrabold text-white text-center mb-10 max-sm:text-2xl">

@@ -271,7 +271,7 @@ export default function University() {
             className="flex flex-row px-10 xl:py-[50px] shadow-lg shadow-redonebg
                                max-sm:flex-col lg:py-[50px]
                                                md:py-[50px]
-                                               max-sm:py-[25px]"
+                                               max-sm:py-[25px] 2xl:py-[120px]"
           >
             <div
               className="flex flex-col text-center w-1/2 items-center justify-evenly text-3xl font-extrabold text-white
@@ -414,7 +414,7 @@ export default function University() {
           className="flex flex-col xl:py-[50px] px-10
                                       lg:py-[50px]
                                       md:py-[50px]
-                                      max-sm:py-[25px]"
+                                      max-sm:py-[25px] 2xl:py-[120px]"
         >
           <p className="text-4xl font-extrabold text-redonebg text-center mb-12">
             {t("works")}

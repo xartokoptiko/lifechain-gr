@@ -147,7 +147,7 @@ export default function Home() {
 
         </div>
         <div className="flex flex-col w-full bg-cover items-center justify-center max-sm:px-[20px]">
-          <div className="flex flex-col 2xl:py-[200px] py-[130px] max-sm:py-[280px]">
+          <div className="flex flex-col 2xl:py-[240px] py-[130px] max-sm:py-[280px]">
             <p
               className="xl:text-5xl text-white font-extrabold p-10 rounded-xl bg-black bg-opacity-60 animate-fade-up animate-delay-1000
       lg:text-3xl md:text-3xl text-center"
@@ -157,7 +157,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col bg-[#d8d8d8] w-full items-center justify-center text-center text-3xl subpixel-antialiased text-[#424242] font-extrabold py-[100px] font-sans max-sm:px-[15px]">
+      <div className="flex flex-col bg-[#d8d8d8] w-full items-center justify-center text-center text-3xl subpixel-antialiased text-[#424242] font-extrabold py-[100px] font-sans max-sm:px-[15px] 2xl:py-[150px]">
         <p className="animate-fade-left animate-delay-1000">
           {t("app_one")} <br /> {t("app_two")}{" "}
         </p>
@@ -169,7 +169,7 @@ export default function Home() {
         <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full max-sm:mb-[100px]">
           <img
             src="/app/photos/homepage.png"
-            className="w-[172px] h-[372px] shadow-2xl shadow-blue-800 rounded-xl"
+            className="w-[172px] h-[372px] shadow-2xl shadow-blue-800 rounded-xl 2xl:w-[210px] 2xl:h-[450px]"
           />
         </div>
         <div className="flex flex-col w-1/2 items-center max-sm:w-full">
@@ -275,11 +275,11 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center w-1/2 max-sm:w-full">
           <img
             src="/app/photos/homeprivate.png"
-            className="w-[172px] h-[372px] shadow-2xl shadow-blue-800 rounded-xl"
+            className="w-[172px] h-[372px] shadow-2xl shadow-blue-800 rounded-xl 2xl:w-[210px] 2xl:h-[450px]"
           />
         </div>
       </div>
-      <div className="flex flex-col bg-[#d8d8d8] w-full py-[100px] items-center justify-center max-sm:px-[15px]">
+      <div className="flex flex-col bg-[#d8d8d8] w-full py-[100px] items-center justify-center max-sm:px-[15px] 2xl:py-[120px]">
         <p className="text-4xl text-[#424242] font-extrabold mb-[35px]">
           {t("mission")}
         </p>
