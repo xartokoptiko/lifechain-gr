@@ -1,32 +1,36 @@
-# Lifechain.gr 
-## The smart way to be safe !
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-### Framework and libraries description
+## Getting Started
 
-Lifechain.gr uses the [Next.js](https://nextjs.org/) framework with a combination of typescript and javascript. Next.js is a framwork optimized with the [react](https://react.dev/) library for the UI and [node](https://nodejs.org/en) for the API endpoints that can be also used to create a microservice. Next.js is currently the most popular framwork for web-applications thanks to the majority of libraries in npm. In our case we used 
-1. framer-motion (Animation library)
-2. Node-emailer (Email service)
-3. chakra-ui (UI library)
-4. Next-ui (UI library)
-5. Icons from flaticon
-6. i18n (Translation library)
-7. react-intersection-observer (Auto drag)
-8. Shape devider (svg generation for curves)
-9. @svgr/webpack (Svg inmplimitatation from files)
+First, run the development server:
 
-Lifechain uses the page router for pages configuration and the creation of the api endpoints, mostly for the email and trasnlation services.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### Deployment and domain
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The easiest way to deploy your Next.js project is from [Vercel](https://vercel.com), The company behind the framework itself ! It provides a simple enviroment to host the web-app and services to keep track with users experience. Just puss your project on github in a public repository, license it , create a vercel account and paste your github repository link !  
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-### Want to learn how to make a website like this ? Follow these links
-- Learn The [framwork](https://nextjs.org/)
-- Lifechain code documantation(Under development)
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-### The team
-- Lampros karachristos / full-stack dev & designer
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
-### License
-The lifechain.gr site is licensed under the Apache License 2.0 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

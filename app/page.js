@@ -1,11 +1,9 @@
-import { Inter } from "next/font/google";
+'use client';
 import { useState } from "react";
 import Head from "next/head";
 import { Dropdown, Avatar, Grid, User } from "@nextui-org/react";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [isHidden, setIsHidden] = useState(true);
@@ -17,9 +15,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Lifechain</title>
-      </Head>
       <div
         className="flex flex-col w-full bg-cover"
         style={{ backgroundImage: "url(athens.jpg)" }}
