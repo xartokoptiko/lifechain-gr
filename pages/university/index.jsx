@@ -213,12 +213,12 @@ export default function University() {
                     </Dropdown.Trigger>
                     <Dropdown.Menu>
                       <Dropdown.Item>
-                        <Link href="/travel" locale="en">
+                        <Link href="/university" locale="en">
                           <h2>English</h2>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/travel" locale="gr">
+                        <Link href="/university" locale="gr">
                           <h2>Ελληνικά</h2>
                         </Link>
                       </Dropdown.Item>
