@@ -15,6 +15,10 @@ export default function Home() {
     setIsHidden(!isHidden);
   };
 
+  const toggleAlert = (text) => {
+    alert(text);
+  }
+
   return (
     <>
       <Head>
@@ -37,7 +41,7 @@ export default function Home() {
               {/* <a>About us</a> */}
             </div>
             <div className="flex flex-row space-x-4 items-center justify-center">
-              <p className="px-[10px] py-[15px] rounded-lg bg-white bg-opacity-80 text-blue-900 cursor-pointer">
+              <p onClick={() => {toggleAlert("This action is not yet suppoerted")}} className="px-[25px] cursor-pointer py-[10px] text-blue-900 font-extrabold opacity-80 bg-white rounded-lg shadow-white shadow-2xl">
                 {t("responder")}
               </p>
               <div>
@@ -214,9 +218,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
+            <a href="/university" className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
               <p>{t("learn")}</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -265,9 +269,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
+            <a href="/travel" className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
               <p>{t("learn")}</p>
-            </div>
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center w-1/2 max-sm:w-full">

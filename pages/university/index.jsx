@@ -171,36 +171,60 @@ export default function University() {
         {/* START OF HEADER */}
         <div className="flex flex-col bg-gradient-to-br to-redonebg  from-redtwobg via-90%">
           <div>
-            <div className="flex flex-row p-8 items-center w-full">
-              <div className="flex flex-row items-center">
-                <Link href="/">
-                  <img src="../../logo.png" className="w-[200px] h-[80px]" />
-                </Link>
-              </div>
-              <div className="flex flex-row items-center ml-14 text-white text-lg font-bold max-sm:hidden">
-                <a className="mr-5" onClick={scrollToElementWhat} href="#">
-                  {t("menu_what")}
-                </a>
-                <a className="mr-5" onClick={scrollToElementHow} href="#">
-                  {t("menu_how")}
-                </a>
-                <a className="mr-5" onClick={scrollToElementContact} href="#">
-                  {t("menu_contact")}
-                </a>
-              </div>
-              <div className=" flex flex-row flex-1 space-x-[15px] justify-end">
-
-                <a href="/login" className="bg-gradient-to-br to-blueshadow cursor-pointer from-white via-90% rounded-lg shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden ">
-                  Login
-                </a>
-
-                <button
-                  onClick={scrollToElementApp}
-                  className="bg-gradient-to-br to-blueshadow  from-white via-90% rounded-lg shadow-2xl  p-3 font-bold text-redonebg max-sm:hidden "
-                >
-                  {t("menu_get")}
-                </button>
-
+            <div className="flex flex-row px-[40px] py-[30px]">
+              <Link href={"/"}>
+                <img
+                  src="logo.png"
+                  className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]"
+                />
+              </Link>
+              <div className="flex flex-row w-full justify-between items-center text-extrabold text-white ">
+                <div className="flex flex-row space-x-5 font-extrabold text-white max-sm:hidden">
+                  <a onClick={scrollToElementWhat} href="#">
+                    {t("menu_what")}
+                  </a>
+                  <a onClick={scrollToElementHow} href="#">
+                    {t("menu_how")}
+                  </a>
+                  {/* <a href="#">Travel agences</a> */}
+                  <a onClick={scrollToElementContact} href="#">
+                    {t("menu_contact")}
+                  </a>
+                </div>
+                <div className="flex flex-row space-x-4 items-center max-sm:hidden">
+                  <p
+                    onClick={scrollToElementApp}
+                    className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl"
+                  >
+                    {t("menu_get")}
+                  </p>
+                  <a href="/login" className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl">
+                    Login
+                  </a>
+                </div>
+                <div>
+                  <Dropdown>
+                    <Dropdown.Trigger>
+                      <button className="rounded-full p-3 bg-white shadow-2xl ">
+                        <p className=" font-extrabold text-redonebg">
+                          {t("lang")}
+                        </p>
+                      </button>
+                    </Dropdown.Trigger>
+                    <Dropdown.Menu>
+                      <Dropdown.Item>
+                        <Link href="/travel" locale="en">
+                          <h2>English</h2>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/travel" locale="gr">
+                          <h2>Ελληνικά</h2>
+                        </Link>
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
                 <div className=" xl:hidden lg:hidden md:hidden">
                   <Dropdown>
                     <Dropdown.Trigger>
@@ -228,36 +252,6 @@ export default function University() {
                         <Text onClick={scrollToElementApp}>
                           {t("menu_get")}
                         </Text>
-                      </Dropdown.Item>
-
-                      <Dropdown.Item>
-                        <Link href={"/login"}>
-                          Login
-                        </Link>
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </div>
-
-                <div>
-                  <Dropdown>
-                    <Dropdown.Trigger>
-                      <button className="rounded-full p-3 bg-gradient-to-br to-blueshadow  from-white via-90% shadow-2xl ">
-                        <p className=" font-extrabold text-redonebg">
-                          {t("lang")}
-                        </p>
-                      </button>
-                    </Dropdown.Trigger>
-                    <Dropdown.Menu>
-                      <Dropdown.Item>
-                        <Link href="/university" locale="en">
-                          <h2>English</h2>
-                        </Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link href="/university" locale="gr">
-                          <h2>Ελληνικά</h2>
-                        </Link>
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
@@ -324,7 +318,6 @@ export default function University() {
                                                       md:py-[50px]
                                                       max-sm:py-[25px] max-sm:grid-cols-1"
         >
-
           <div
             className="flex flex-row p-10 xl:h-[30vh] bg-gradient-to-br to-redonebg  from-redtwobg via-90%
                                             lg:h-[30vh]
@@ -364,8 +357,6 @@ export default function University() {
               <p>{t("info_two_two")}</p>
             </div>
           </div>
-
-
 
           <div
             className="flex flex-row p-10 xl:h-[30vh]  bg-gradient-to-br to-redonebg  from-redtwobg via-90%
@@ -639,7 +630,7 @@ export default function University() {
                                                                                         max-sm:py-[25px]
                                                                                         space-y-[20px]"
         >
-          <p>Lifechain university</p>
+          <p>Lifechain</p>
           <p>Email : info@lifechain.gr</p>
           <p>
             {t("open")}{" "}
@@ -651,13 +642,18 @@ export default function University() {
                                                     lg:w-[35vh]
                                                     md:w-[20vh]"
           >
+            <a href="https://www.instagram.com/lifechain.gr">
+              <img src="../../instagram.png" className="w-[32px] h-[32px]" />
+            </a>
             <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
-            <img src="../../facebook.png" className="w-[32px] h-[32px]" />
             <a href="https://github.com/xartokoptiko/lifechain-gr">
               <img src="../../github.png" className="w-[32px] h-[32px]" />
             </a>
           </div>
-          <p><a href="/privacy">{t("privacy")}</a> {"  "} | {"  "} <a href="/tou" >{t("tou")}</a></p>
+          <p>
+            <a href="/privacy">{t("privacy")}</a> {"  "} | {"  "}{" "}
+            <a href="/tou">{t("tou")}</a>
+          </p>
           <p>{t("right")}</p>
         </div>
       </main>
