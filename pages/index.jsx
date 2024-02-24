@@ -40,7 +40,7 @@ export default function Home() {
               <p className="px-[10px] py-[15px] rounded-lg bg-white bg-opacity-80 text-blue-900 cursor-pointer">
                 {t("responder")}
               </p>
-              <div >
+              <div>
                 <Dropdown>
                   <Dropdown.Trigger>
                     <button className="rounded-full p-3 bg-white opacity-80 shadow-2xl ">
@@ -85,7 +85,9 @@ export default function Home() {
                 />
 
                 <div
-                  className={`${isHidden ? "hidden" : ""} absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+                  className={`${
+                    isHidden ? "hidden" : ""
+                  } absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
@@ -123,9 +125,7 @@ export default function Home() {
               <Dropdown>
                 <Dropdown.Trigger>
                   <button className="rounded-full p-3 bg-white opacity-80 shadow-2xl ">
-                    <p className=" font-extrabold text-blue-900">
-                      {t("lang")}
-                    </p>
+                    <p className=" font-extrabold text-blue-900">{t("lang")}</p>
                   </button>
                 </Dropdown.Trigger>
                 <Dropdown.Menu>
@@ -143,8 +143,6 @@ export default function Home() {
               </Dropdown>
             </div>
           </div>
-
-
         </div>
         <div className="flex flex-col w-full bg-cover items-center justify-center max-sm:px-[20px]">
           <div className="flex flex-col 2xl:py-[240px] py-[130px] max-sm:py-[280px]">
@@ -312,14 +310,18 @@ export default function Home() {
                                                     lg:w-[35vh]
                                                     md:w-[20vh]"
         >
+          <a href="https://www.instagram.com/lifechain.gr">
+            <img src="../../instagram.png" className="w-[32px] h-[32px]" />
+          </a>
           <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
-          <img src="../../twitter.png" className="w-[32px] h-[32px]" />
-          <img src="../../facebook.png" className="w-[32px] h-[32px]" />
           <a href="https://github.com/xartokoptiko/lifechain-gr">
             <img src="../../github.png" className="w-[32px] h-[32px]" />
           </a>
         </div>
-        <p><a href="/privacy">{t("privacy")}</a> {"  "} | {"  "} <a href="/tou" >{t("tou")}</a></p>
+        <p>
+          <a href="/privacy">{t("privacy")}</a> {"  "} | {"  "}{" "}
+          <a href="/tou">{t("tou")}</a>
+        </p>
         <p>{t("right")}</p>
       </div>
     </>

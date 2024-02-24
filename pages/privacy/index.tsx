@@ -222,9 +222,9 @@ export default function Privacy() {
                                                     lg:w-[35vh]
                                                     md:w-[20vh]"
           >
+            <a href="https://www.instagram.com/lifechain.gr">
+              <img src="../../instagram.png" className="w-[32px] h-[32px]" /></a>
             <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
-            <img src="../../twitter.png" className="w-[32px] h-[32px]" />
-            <img src="../../facebook.png" className="w-[32px] h-[32px]" />
             <a href="https://github.com/xartokoptiko/lifechain-gr">
               <img src="../../github.png" className="w-[32px] h-[32px]" />
             </a>
