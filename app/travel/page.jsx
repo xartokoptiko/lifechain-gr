@@ -536,7 +536,7 @@ export default function Travel() {
                                                                                         max-sm:py-[25px]
                                                                                         space-y-[20px]"
       >
-        <p>Lifechain university</p>
+        <p>Lifechain</p>
         <p>Email : info@lifechain.gr</p>
         <p>
           {t("open")}{" "}
@@ -548,14 +548,18 @@ export default function Travel() {
                                                     lg:w-[35vh]
                                                     md:w-[20vh]"
         >
+          <a href="https://www.instagram.com/lifechain.gr">
+            <img src="../../instagram.png" className="w-[32px] h-[32px]" />
+          </a>
           <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
-          <img src="../../twitter.png" className="w-[32px] h-[32px]" />
-          <img src="../../facebook.png" className="w-[32px] h-[32px]" />
           <a href="https://github.com/xartokoptiko/lifechain-gr">
             <img src="../../github.png" className="w-[32px] h-[32px]" />
           </a>
         </div>
-        <p><a href="/privacy">{t("privacy")}</a> {"  "} | {"  "} <a href="/tou" >{t("tou")}</a></p>
+        <p>
+          <a href="/privacy">{t("privacy")}</a> {"  "} | {"  "}{" "}
+          <a href="/tou">{t("tou")}</a>
+        </p>
         <p>{t("right")}</p>
       </div>
     </>

@@ -1,9 +1,12 @@
-'use client';
+"use client";
+import { Inter } from "next/font/google";
 import { useState } from "react";
 import Head from "next/head";
 import { Dropdown, Avatar, Grid, User } from "@nextui-org/react";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [isHidden, setIsHidden] = useState(true);
@@ -13,8 +16,15 @@ export default function Home() {
     setIsHidden(!isHidden);
   };
 
+  const toggleAlert = (text) => {
+    alert(text);
+  }
+
   return (
     <>
+      <Head>
+        <title>Lifechain</title>
+      </Head>
       <div
         className="flex flex-col w-full bg-cover"
         style={{ backgroundImage: "url(athens.jpg)" }}
@@ -32,10 +42,10 @@ export default function Home() {
               {/* <a>About us</a> */}
             </div>
             <div className="flex flex-row space-x-4 items-center justify-center">
-              <p className="px-[10px] py-[15px] rounded-lg bg-white bg-opacity-80 text-blue-900 cursor-pointer">
+              <p onClick={() => {toggleAlert("This action is not yet suppoerted")}} className="px-[25px] cursor-pointer py-[10px] text-blue-900 font-extrabold opacity-80 bg-white rounded-lg shadow-white shadow-2xl">
                 {t("responder")}
               </p>
-              <div >
+              <div>
                 <Dropdown>
                   <Dropdown.Trigger>
                     <button className="rounded-full p-3 bg-white opacity-80 shadow-2xl ">
@@ -80,7 +90,9 @@ export default function Home() {
                 />
 
                 <div
-                  className={`${isHidden ? "hidden" : ""} absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+                  className={`${
+                    isHidden ? "hidden" : ""
+                  } absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
@@ -118,9 +130,7 @@ export default function Home() {
               <Dropdown>
                 <Dropdown.Trigger>
                   <button className="rounded-full p-3 bg-white opacity-80 shadow-2xl ">
-                    <p className=" font-extrabold text-blue-900">
-                      {t("lang")}
-                    </p>
+                    <p className=" font-extrabold text-blue-900">{t("lang")}</p>
                   </button>
                 </Dropdown.Trigger>
                 <Dropdown.Menu>
@@ -138,8 +148,6 @@ export default function Home() {
               </Dropdown>
             </div>
           </div>
-
-
         </div>
         <div className="flex flex-col w-full bg-cover items-center justify-center max-sm:px-[20px]">
           <div className="flex flex-col 2xl:py-[240px] py-[130px] max-sm:py-[280px]">
@@ -211,9 +219,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
+            <a href="/university" className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
               <p>{t("learn")}</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -262,9 +270,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
+            <a href="/travel" className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
               <p>{t("learn")}</p>
-            </div>
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center w-1/2 max-sm:w-full">
@@ -307,14 +315,18 @@ export default function Home() {
                                                     lg:w-[35vh]
                                                     md:w-[20vh]"
         >
+          <a href="https://www.instagram.com/lifechain.gr">
+            <img src="../../instagram.png" className="w-[32px] h-[32px]" />
+          </a>
           <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
-          <img src="../../twitter.png" className="w-[32px] h-[32px]" />
-          <img src="../../facebook.png" className="w-[32px] h-[32px]" />
           <a href="https://github.com/xartokoptiko/lifechain-gr">
             <img src="../../github.png" className="w-[32px] h-[32px]" />
           </a>
         </div>
-        <p><a href="/privacy">{t("privacy")}</a> {"  "} | {"  "} <a href="/tou" >{t("tou")}</a></p>
+        <p>
+          <a href="/privacy">{t("privacy")}</a> {"  "} | {"  "}{" "}
+          <a href="/tou">{t("tou")}</a>
+        </p>
         <p>{t("right")}</p>
       </div>
     </>
