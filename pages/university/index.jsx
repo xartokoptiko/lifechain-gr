@@ -198,7 +198,10 @@ export default function University() {
                   >
                     {t("menu_get")}
                   </p>
-                  <a href="/login" className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl">
+                  <a
+                    href="/login"
+                    className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl"
+                  >
                     Login
                   </a>
                 </div>
@@ -272,7 +275,7 @@ export default function University() {
                                                       max-sm:w-full"
             >
               <p className="text-5xl text-white font-extrabold max-sm:mb-10">
-                Lifechain University
+                Life chain University
               </p>
               <div className="flex flex-row w-[300px] h-[10px] rounded-2xl bg-white shadow-lg shadow-white max-sm:mb-10"></div>
               <div className="fjustify-center items-center max-sm:mb-12">
@@ -471,29 +474,36 @@ export default function University() {
                                         md:w-[50vh]
                                         max-sm:w-[40vh]"
           >
-            <div className="flex flex-row w-fit text-xl font-extrabold text-white items-center">
-              <img
-                src="../../google-play.png"
-                className="w-[64px] h-[64pxpx]
+            <Link
+              href={
+                "https://play.google.com/store/apps/details?id=gr.lifechain.app"
+              }
+            >
+              <div className="flex flex-row w-fit text-xl font-extrabold text-white items-center">
+                <img
+                  src="../../google-play.png"
+                  className="w-[64px] h-[64pxpx]
                            max-sm:w-[32px] max-sm:h-[32px] "
-              />
-              <p className="text-xl ml-4">Google play</p>
-            </div>
+                />
 
-            <div className="flex flex-row w-fit text-xl font-extrabold text-white items-center">
-              <img
-                src="../../app-store.png"
-                className="w-[64px] h-[64pxpx]
+                <p className="text-xl ml-4">Google play</p>
+              </div>
+            </Link>
+
+            <Link href={"https://apps.apple.com/us/app/lifechain/id6465402686"}>
+              <div className="flex flex-row w-fit text-xl font-extrabold text-white items-center">
+                <img
+                  src="../../app-store.png"
+                  className="w-[64px] h-[64pxpx]
                               max-sm:w-[32px] max-sm:h-[32px]"
-              />
-              <p className="text-xl ml-4">App store</p>
-            </div>
+                />
+
+                <p className="text-xl ml-4">App store</p>
+              </div>
+            </Link>
           </div>
           <Container maxW="700px" mt={8} textAlign="center" textColor="white">
             <Heading mb={3}>{t("sub")}</Heading>
-            <FormLabel mb={4} textAlign="center">
-              {t("not")}
-            </FormLabel>
 
             <FormControl mb={4}>
               <Input

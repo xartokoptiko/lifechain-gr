@@ -374,7 +374,7 @@ export default function Travel() {
                                       "
       >
         <p className="text-4xl font-extrabold text-white text-center mb-10 max-sm:text-2xl">
-          {t("soon")}
+          {t("soon_two")}
         </p>
         <div
           className="flex flex-row xl:w-[100vh] justify-evenly
