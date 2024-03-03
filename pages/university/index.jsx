@@ -640,7 +640,7 @@ export default function University() {
                                                                                         max-sm:py-[25px]
                                                                                         space-y-[20px]"
         >
-          <p>Lifechain</p>
+          <p>Life Chain</p>
           <p>Email : info@lifechain.gr</p>
           <p>
             {t("open")}{" "}
@@ -654,6 +654,9 @@ export default function University() {
           >
             <a href="https://www.instagram.com/lifechain.gr">
               <img src="../../instagram.png" className="w-[32px] h-[32px]" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61554962138127">
+              <img src="../../facebook.png" className="w-[32px] h-[32px]" />
             </a>
             <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
             <a href="https://github.com/xartokoptiko/lifechain-gr">

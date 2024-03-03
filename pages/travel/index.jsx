@@ -164,31 +164,40 @@ export default function Travel() {
       <div className=" flex flex-col px-[10] bg-gradient-to-br to-redonebg  from-redtwobg via-90%">
         <div className="flex flex-row px-[40px] py-[30px]">
           <Link href={"/"}>
-            <img src="logo.png" className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]" />
+            <img
+              src="logo.png"
+              className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]"
+            />
           </Link>
           <div className="flex flex-row w-full justify-between items-center text-extrabold text-white ">
             <div className="flex flex-row space-x-5 font-extrabold text-white max-sm:hidden">
-              <a onClick={scrollToElementWhat} href="#">{t("menu_what")}</a>
-              <a onClick={scrollToElementHow} href="#">{t("menu_how")}</a>
+              <a onClick={scrollToElementWhat} href="#">
+                {t("menu_what")}
+              </a>
+              <a onClick={scrollToElementHow} href="#">
+                {t("menu_how")}
+              </a>
               {/* <a href="#">Travel agences</a> */}
-              <a onClick={scrollToElementContact} href="#">{t("menu_contact")}</a>
+              <a onClick={scrollToElementContact} href="#">
+                {t("menu_contact")}
+              </a>
             </div>
             <div className="flex flex-row space-x-4 items-center max-sm:hidden">
-              <p onClick={scrollToElementApp} className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl">
+              <p
+                onClick={scrollToElementApp}
+                className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl"
+              >
                 {t("menu_get")}
               </p>
               <p className="px-[25px] cursor-pointer py-[10px] text-redonebg font-extrabold bg-white rounded-lg shadow-white shadow-2xl">
                 Login
               </p>
-
             </div>
             <div>
               <Dropdown>
                 <Dropdown.Trigger>
                   <button className="rounded-full p-3 bg-white shadow-2xl ">
-                    <p className=" font-extrabold text-redonebg">
-                      {t("lang")}
-                    </p>
+                    <p className=" font-extrabold text-redonebg">{t("lang")}</p>
                   </button>
                 </Dropdown.Trigger>
                 <Dropdown.Menu>
@@ -212,15 +221,11 @@ export default function Travel() {
                 </Dropdown.Trigger>
                 <Dropdown.Menu>
                   <Dropdown.Item>
-                    <Text onClick={scrollToElementWhat}>
-                      {t("menu_what")}
-                    </Text>
+                    <Text onClick={scrollToElementWhat}>{t("menu_what")}</Text>
                   </Dropdown.Item>
 
                   <Dropdown.Item>
-                    <Text onClick={scrollToElementHow}>
-                      {t("menu_how")}
-                    </Text>
+                    <Text onClick={scrollToElementHow}>{t("menu_how")}</Text>
                   </Dropdown.Item>
                   <Dropdown.Item>
                     <Text onClick={scrollToElementContact}>
@@ -229,9 +234,7 @@ export default function Travel() {
                   </Dropdown.Item>
 
                   <Dropdown.Item>
-                    <Text onClick={scrollToElementApp}>
-                      {t("menu_get")}
-                    </Text>
+                    <Text onClick={scrollToElementApp}>{t("menu_get")}</Text>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
@@ -259,7 +262,10 @@ export default function Travel() {
           </div>
         </div>
       </div>
-      <div id="whatisit" className=" flex flex-row bg-white w-full px-[25px] py-[100px] max-sm:flex-col 2xl:py-[120px]">
+      <div
+        id="whatisit"
+        className=" flex flex-row bg-white w-full px-[25px] py-[100px] max-sm:flex-col 2xl:py-[120px]"
+      >
         <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
           <img
             src="/privateapp/privatemore.png"
@@ -316,7 +322,8 @@ export default function Travel() {
         </div>
       </div>
 
-      <div id="howitworks"
+      <div
+        id="howitworks"
         className="flex flex-col xl:py-[50px] px-10
                                       lg:py-[50px]
                                       md:py-[50px]
@@ -400,7 +407,13 @@ export default function Travel() {
             <p className="text-xl ml-4">App store</p>
           </div>
         </div>
-        <Container  id="contactus" maxW="700px" mt={8} textAlign="center" textColor="white">
+        <Container
+          id="contactus"
+          maxW="700px"
+          mt={8}
+          textAlign="center"
+          textColor="white"
+        >
           <Heading mb={3}>{t("sub")}</Heading>
           <FormLabel mb={4} textAlign="center">
             {t("not")}
@@ -536,7 +549,7 @@ export default function Travel() {
                                                                                         max-sm:py-[25px]
                                                                                         space-y-[20px]"
       >
-        <p>Lifechain</p>
+        <p>Life Chain</p>
         <p>Email : info@lifechain.gr</p>
         <p>
           {t("open")}{" "}
@@ -550,6 +563,9 @@ export default function Travel() {
         >
           <a href="https://www.instagram.com/lifechain.gr">
             <img src="../../instagram.png" className="w-[32px] h-[32px]" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61554962138127">
+            <img src="../../facebook.png" className="w-[32px] h-[32px]" />
           </a>
           <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
           <a href="https://github.com/xartokoptiko/lifechain-gr">

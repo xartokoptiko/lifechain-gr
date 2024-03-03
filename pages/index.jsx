@@ -17,7 +17,7 @@ export default function Home() {
 
   const toggleAlert = (text) => {
     alert(text);
-  }
+  };
 
   return (
     <>
@@ -41,7 +41,12 @@ export default function Home() {
               {/* <a>About us</a> */}
             </div>
             <div className="flex flex-row space-x-4 items-center justify-center">
-              <p onClick={() => {toggleAlert("This action is not yet suppoerted")}} className="px-[25px] cursor-pointer py-[10px] text-blue-900 font-extrabold opacity-80 bg-white rounded-lg shadow-white shadow-2xl">
+              <p
+                onClick={() => {
+                  toggleAlert("This action is not yet suppoerted");
+                }}
+                className="px-[25px] cursor-pointer py-[10px] text-blue-900 font-extrabold opacity-80 bg-white rounded-lg shadow-white shadow-2xl"
+              >
                 {t("responder")}
               </p>
               <div>
@@ -177,7 +182,7 @@ export default function Home() {
         <div className="flex flex-col w-1/2 items-center max-sm:w-full">
           <div className="flex flex-col w-full lg:max-w-[300px] md:max-w-[300px] max-sm:px-[10px] max-sm:items-center">
             <p className="text-3xl font-extrabold text-[#424242]">
-              LifeChain University
+              Life Chain University
             </p>
             <p className="text-lg font-extrabold text-[#424242] mt-[15px]">
               {t("uni_app_catch")}
@@ -218,7 +223,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <a href="/university" className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
+            <a
+              href="/university"
+              className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold"
+            >
               <p>{t("learn")}</p>
             </a>
           </div>
@@ -228,7 +236,7 @@ export default function Home() {
         <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full max-sm:mb-[100px]">
           <div className="flex flex-col w-full lg:max-w-[300px] md:max-w-[300px] max-sm:px-[10px] max-sm:items-center">
             <p className="text-3xl font-extrabold text-[#424242] lg:font-bold md:font-bold">
-              LifeChain Travel
+              Life Chain Travel
             </p>
             <p className="text-lg font-extrabold text-[#424242] mt-[15px] lg:font-bold md:font-bold">
               {t("trav_app_catch")}
@@ -269,7 +277,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <a href="/travel" className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold">
+            <a
+              href="/travel"
+              className="flex felx-col px-[20px] py-[10px] mt-[30px] items-center justify-center text-center rounded-xl bg-[#1c50b8] text-white cursor-pointer font-extrabold"
+            >
               <p>{t("learn")}</p>
             </a>
           </div>
@@ -302,7 +313,7 @@ export default function Home() {
                                                                                         max-sm:py-[25px]
                                                                                         space-y-[20px]"
       >
-        <p>Lifechain</p>
+        <p>Life Chain</p>
         <p>Email : info@lifechain.gr</p>
         <p>
           {t("open")}{" "}
@@ -316,6 +327,9 @@ export default function Home() {
         >
           <a href="https://www.instagram.com/lifechain.gr">
             <img src="../../instagram.png" className="w-[32px] h-[32px]" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61554962138127">
+            <img src="../../facebook.png" className="w-[32px] h-[32px]" />
           </a>
           <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
           <a href="https://github.com/xartokoptiko/lifechain-gr">
