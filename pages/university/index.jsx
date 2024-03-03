@@ -275,7 +275,7 @@ export default function University() {
                                                       max-sm:w-full"
             >
               <p className="text-5xl text-white font-extrabold max-sm:mb-10">
-                Life chain University
+                Life Chain University
               </p>
               <div className="flex flex-row w-[300px] h-[10px] rounded-2xl bg-white shadow-lg shadow-white max-sm:mb-10"></div>
               <div className="fjustify-center items-center max-sm:mb-12">
