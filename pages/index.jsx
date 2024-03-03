@@ -40,7 +40,7 @@ export default function Home() {
               <a href="/travel">{t("trav")}</a>
               {/* <a>About us</a> */}
             </div>
-            <div className="flex flex-row space-x-4 items-center justify-center">
+            <div className="flex flex-row space-x-4 items-center justify-center max-sm:mr-[15px]">
               <p
                 onClick={() => {
                   toggleAlert("This action is not yet suppoerted");

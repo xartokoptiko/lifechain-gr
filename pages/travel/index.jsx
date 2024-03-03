@@ -214,7 +214,7 @@ export default function Travel() {
                 </Dropdown.Menu>
               </Dropdown>
             </div>
-            <div className=" xl:hidden lg:hidden md:hidden">
+            <div className=" xl:hidden lg:hidden md:hidden max-sm:ml-[15px]">
               <Dropdown>
                 <Dropdown.Trigger>
                   <Avatar src="../../menu.png" />
