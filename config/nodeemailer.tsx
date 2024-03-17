@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 
 export const mailOptions = {
   from: email,
-  to: "info@lifechain.gr",
+  to: "lifechainsocial@gmail.com",
 };
 
 export default transporter;

@@ -502,7 +502,7 @@ export default function ToU() {
                                                                                         space-y-[20px]"
         >
           <p>Life Chain</p>
-          <p>Email : info@lifechain.gr</p>
+          <p>Email : lifechainsocial@gmail.com</p>
           <p>
             This site is open source ! find it on{" "}
             <a href="https://github.com/xartokoptiko/lifechain-gr">github</a>
@@ -514,15 +514,17 @@ export default function ToU() {
                                                     md:w-[20vh]"
           >
             <a href="https://www.instagram.com/lifechain.gr">
-              <img src="../../instagram.png" className="w-[32px] h-[32px]" />
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61554962138127">
-              <img src="../../facebook.png" className="w-[32px] h-[32px]" />
-            </a>
+            <img src="../../instagram.png" className="w-[32px] h-[32px]" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61554962138127">
+            <img src="../../facebook.png" className="w-[32px] h-[32px]" />
+          </a>
+          <a href="https://www.linkedin.com/company/life-chain-app/">
             <img src="../../linkedin.png" className="w-[32px] h-[32px]" />
-            <a href="https://github.com/xartokoptiko/lifechain-gr">
-              <img src="../../github.png" className="w-[32px] h-[32px]" />
-            </a>
+          </a>
+          <a href="https://github.com/xartokoptiko/lifechain-gr">
+            <img src="../../github.png" className="w-[32px] h-[32px]" />
+          </a>
           </div>
           <p>
             <a href="/privacy">Privacy</a> {"  "} | {"  "}{" "}

@@ -641,7 +641,7 @@ export default function University() {
                                                                                         space-y-[20px]"
         >
           <p>Life Chain</p>
-          <p>Email : info@lifechain.gr</p>
+          <p>Email : lifechainsocial@gmail.com</p>
           <p>
             {t("open")}{" "}
             <a href="https://github.com/xartokoptiko/lifechain-gr">github</a>
