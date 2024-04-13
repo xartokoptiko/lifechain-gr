@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils/cn";
 import { useEffect, useRef, useState } from "react";
 
-export const BackgroundGradientAnimation = ({
+export const BackgroundGradientAnimationMin = ({
   gradientBackgroundStart = "rgb(221, 38, 40)",
   gradientBackgroundEnd = "rgb(167, 92, 80)",
   firstColor = "221, 38, 40", // Matches #dd2628
@@ -89,7 +89,7 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        `h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]`,
+        `h-[400px] w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]`,
         containerClassName
       )}
     >
