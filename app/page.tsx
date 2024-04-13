@@ -4,9 +4,7 @@ import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { BackgroundGradientAnimationMin } from "@/components/ui/background-gradient-animation-min";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { LampContainer } from "@/components/ui/lamb";
 import { TypewriterEffect } from "@/components/ui/typewriter-animation";
-import Image from "next/image";
 
 export default function Home() {
   const people = [
@@ -124,7 +122,9 @@ export default function Home() {
           <a href="/travel/" about="Life Chain Travel page">
             Travel
           </a>
-          <p>University</p>
+          <a href="/university/" about="Life Chain University page">
+            University
+            </a>
         </div>
         <div className="flex flex-col items-center w-[200px]">
           <p>Become a responder</p>
@@ -144,7 +144,7 @@ export default function Home() {
         <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full max-sm:mb-[100px]">
           <img
             src="/app/photos/homepage.png"
-            className="w-[172px] h-[372px] shadow-2xl shadow-blue-800 rounded-xl 2xl:w-[210px] 2xl:h-[450px]"
+            className="w-[172px] h-[372px] shadow-2xl shadow-red-800 rounded-xl 2xl:w-[210px] 2xl:h-[450px]"
           />
         </div>
         <div className="flex flex-col w-1/2 items-center max-sm:w-full">
@@ -256,7 +256,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center w-1/2 max-sm:w-full">
           <img
             src="/app/photos/homeprivate.png"
-            className="w-[172px] h-[372px] shadow-2xl shadow-blue-800 rounded-xl 2xl:w-[210px] 2xl:h-[450px]"
+            className="w-[172px] h-[372px] shadow-2xl shadow-red-800 rounded-xl 2xl:w-[210px] 2xl:h-[450px]"
           />
         </div>
       </div>
