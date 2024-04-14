@@ -13,6 +13,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'gradient-animation': 'linear-gradient(to_bottom_right, var(--cyan-500), var(--emerald-500))',
       },
       colors :{
         "dark-blue" : "#181D3D",
