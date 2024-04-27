@@ -5,6 +5,13 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { BackgroundGradientAnimationMin } from "@/components/ui/background-gradient-animation-min";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { TypewriterEffect } from "@/components/ui/typewriter-animation";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { Fragment } from "react";
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function Home() {
   const people = [
@@ -111,7 +118,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="absolute top-0 right-0 z-50 flex flex-row w-full p-10 text-white font-extrabold items-center justify-between">
+      <div className="absolute top-0 max-sm:hidden right-0 z-50 flex flex-row w-full p-10 text-white font-extrabold items-center justify-between">
         <div className="flex felx-col w-[200px] items-center">
           <img
             src="logo.png"
@@ -124,11 +131,102 @@ export default function Home() {
           </a>
           <a href="/university/" about="Life Chain University page">
             University
-            </a>
+          </a>
         </div>
         <div className="flex flex-col items-center w-[200px]">
           <p>Become a responder</p>
         </div>
+      </div>
+      <div className="hidden max-sm:visible absolute top-0 right-0 z-50 max-sm:flex flex-row w-full p-6 justify-between items-center">
+        <div className="flex felx-col w-[200px] items-center">
+          <img
+            src="logo.png"
+            className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]"
+          />
+        </div>
+
+        <Menu as="div" className="relative inline-block text-left">
+          <div>
+            <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md border-white border-1 px-3 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+              Menu
+              <ChevronDownIcon
+                className="-mr-1 h-5 w-5 text-gray-400"
+                aria-hidden="true"
+              />
+            </Menu.Button>
+          </div>
+
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-100"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
+          >
+            <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div className="py-1">
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Account settings
+                    </a>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Support
+                    </a>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      License
+                    </a>
+                  )}
+                </Menu.Item>
+                <form method="POST" action="#">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button
+                        type="submit"
+                        className={classNames(
+                          active
+                            ? "bg-gray-100 text-gray-900"
+                            : "text-gray-700",
+                          "block w-full px-4 py-2 text-left text-sm"
+                        )}
+                      >
+                        Sign out
+                      </button>
+                    )}
+                  </Menu.Item>
+                </form>
+              </div>
+            </Menu.Items>
+          </Transition>
+        </Menu>
       </div>
       <BackgroundGradientAnimation>
         <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
@@ -273,7 +371,7 @@ export default function Home() {
         <p className="w-full text-center font-extrabold text-red-500 text-5xl mb-[100px]">
           Contact us via
         </p>
-        <div className="grid grid-cols-3 gap-[50px]">
+        <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-[50px]">
           <div className="flex flex-col items-center justify-center">
             <PinContainer
               title="/ui.aceternity.com"
@@ -357,7 +455,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center justify-center py-[120px] w-full">
-        <p className="w-full text-center font-extrabold text-red-500 text-5xl mb-[100px]">
+        <p className="w-full text-center font-extrabold text-red-500 text-5xl max-sm:text-3xl mb-[100px]">
           The Team behind safety
         </p>
         <div className="flex flex-row items-center justify-center px-[100px] w-full">
@@ -366,18 +464,17 @@ export default function Home() {
       </div>
 
       <BackgroundGradientAnimationMin>
-        <div className="flex flex-col w-full px-[25px] py-[15px]">
-          <div className="grid grid-cols-4 gap-10 w-full h-[400px] text-white">
-            <div className="flex flex-col">
+        <footer className="flex flex-col w-full px-[25px] max-sm:px-[10px] py-[15px]">
+          <div className="grid grid-cols-4 max-sm:grid max-sm:grid-cols-3 max-sm:gap-4 gap-10 max-sm:text-xs w-full text-white ">
+            <div className="flex flex-col max-sm:col-span-3 max-sm:items-center max-sm:justify-center">
               <img
                 src="logo.png"
-                className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]"
+                className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px] max-sm:mr-[0px]"
               />
             </div>
 
-            <div className="flex flex-col mt-[35px] items-center">
+            <div className="flex flex-col max-sm:w-full mt-[35px] items-center">
               <div className="space-y-3 flex flex-col">
-                <p>Email : lifechainsocial@gmail.com</p>
                 <p>Instagram</p>
                 <p>Facebook</p>
                 <p>Linked in</p>
@@ -394,16 +491,17 @@ export default function Home() {
 
             <div className="flex flex-col mt-[35px] items-center">
               <div className="space-y-3 flex flex-col">
-              <a>Privacy Policy</a>
-              <a>Terms of use</a>
+                <a>Privacy Policy</a>
+                <a>Terms of use</a>
               </div>
             </div>
 
-            <div className="flex flex-col col-span-4 items-center jusityf-center p-[5px] mt-[100px]">
-              All right reserved www.lifechain.gr
+            <div className="flex flex-col col-span-4 max-sm:col-span-3 items-center justify-end mt-[100px]">
+              <p>lifechainsocial@gmail.com</p>
+              <p>All right reserved www.lifechain.gr</p>
             </div>
           </div>
-        </div>
+        </footer>
       </BackgroundGradientAnimationMin>
     </main>
   );

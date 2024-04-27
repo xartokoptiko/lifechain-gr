@@ -86,7 +86,7 @@ export default function University() {
 
   return (
     <main>
-      <div className="absolute top-0 right-0 z-50 flex flex-row w-full p-10 text-white font-extrabold items-center justify-between">
+      <div className="absolute top-0 right-0 z-50 max-sm:hidden flex flex-row w-full p-10 text-white font-extrabold items-center justify-between">
         <div className="flex felx-col w-[200px] items-center">
           <Link href={"/"}>
             <img
@@ -228,7 +228,7 @@ export default function University() {
       </div>
 
       <BackgroundGradientAnimationMin>
-        <div className="flex flex-col w-full px-[25px] py-[15px]">
+        <footer className="flex flex-col w-full px-[25px] py-[15px]">
           <div className="grid grid-cols-4 gap-10 w-full h-[400px] text-white">
             <div className="flex flex-col">
               <img
@@ -265,7 +265,7 @@ export default function University() {
               All right reserved www.lifechain.gr
             </div>
           </div>
-        </div>
+        </footer>
       </BackgroundGradientAnimationMin>
     </main>
   );
