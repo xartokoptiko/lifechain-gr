@@ -3,6 +3,7 @@
 import FeatureSection from "@/components/feature-section";
 import { BackgroundGradientAnimationMin } from "@/components/ui/background-gradient-animation-min";
 import CenterFeatureSections from "@/components/ui/center-feature-section";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Travel() {
@@ -36,10 +37,12 @@ export default function Travel() {
     <main>
       <div className="flex flex-col w-full pb-[100px] bg-gradient-to-br from-red-700 via-red-600 to-purple-700">
         <div className="flex flex-row py-10 px-14 items-center justify-between">
-          <img
-            src="logo.png"
-            className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]"
-          />
+          <Link href={"/"}>
+            <img
+              src="logo.png"
+              className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]"
+            />
+          </Link>
           <div className="flex flex-row items-center justify-center text-white font-extrabold space-x-3">
             <a href="#">Travel</a>
             <a href="/university">University</a>
@@ -94,7 +97,9 @@ export default function Travel() {
         <CenterFeatureSections />
       </div>
       <div className="flex flex-col w-full items-center justify-center py-[130px]">
-        <p className="text-3xl font-extrabold text-red-700 pb-[80px]">How it works</p>
+        <p className="text-3xl font-extrabold text-red-700 pb-[80px]">
+          How it works
+        </p>
         <div className="grid grid-cols-3 max-sm:grid-cols-1 w-full">
           <div className="flex flex-col w-full items-end justify-center">
             <img
