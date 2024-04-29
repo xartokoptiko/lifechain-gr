@@ -1,6 +1,7 @@
 "use client";
 import AimUniContent from "@/components/ui/aim-content";
 import { BackgroundGradientAnimationMin } from "@/components/ui/background-gradient-animation-min";
+import BecomeResponer from "@/components/ui/become-responder";
 import CenterFeatureSections from "@/components/ui/center-feature-section";
 import HeaderUniSection from "@/components/ui/header-section";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
@@ -146,7 +147,7 @@ export default function University() {
 
       <div
         id="gettheapp"
-        className="flex flex-col bg-gradient-to-br to-redonebg  from-redtwobg via-90% p-10 items-center mb-16
+        className="flex flex-col bg-gradient-to-br to-redonebg  from-redtwobg via-90% p-10 items-center
                                       "
       >
         <p className="text-4xl font-extrabold text-white text-center mb-10 max-sm:text-2xl">
@@ -186,6 +187,9 @@ export default function University() {
             </div>
           </Link>
         </div>
+      </div>
+      <div className="flex flex-col items-center justify-center">
+          <BecomeResponer />
       </div>
       <BackgroundGradientAnimationMin>
         <footer className="flex flex-col w-full px-[25px] max-sm:px-[10px] py-[15px]">
