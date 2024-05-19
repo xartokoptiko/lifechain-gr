@@ -3,7 +3,6 @@ const links = [
 
     { name: 'More info', href: '#' },
     { name: 'How it works', href: '#' },
-    { name: 'Our aim', href: '#' },
     { name: 'Download the app', href: '#' },
   ]
 //   const stats = [

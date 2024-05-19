@@ -7,9 +7,17 @@ import HeaderUniSection from "@/components/ui/header-section";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import { Menu, Transition } from '@headlessui/react'
+import {IconMenu} from "@tabler/icons-react";
+import CenterFeatureSectionUni from "@/components/ui/center-feature-section-uni";
 
 export default function University() {
+
+  function classNames(...classes: any[]) {
+    return classes.filter(Boolean).join(" ");
+  }
+
   const [step, setStep] = useState(1);
 
   const stepContent = {
@@ -39,36 +47,109 @@ export default function University() {
   return (
     <main>
       <div className="flex flex-col w-full pb-[100px] items-center bg-gradient-to-br from-red-700 via-red-600 to-purple-700">
-        <div className="flex flex-row w-full py-10 px-14 items-center justify-between">
+        <div className="flex flex-row w-full py-10 px-14 items-center justify-between max-sm:px-4">
           <Link href={"/"}>
             <img
               src="logo.png"
               className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]"
             />
           </Link>
-          <div className="flex flex-row items-center justify-center text-white font-extrabold space-x-3">
+          <div className="flex flex-row items-center justify-center text-white font-extrabold space-x-3 max-sm:hidden">
             <a href="/travel">Travel</a>
             <a href="/#">University</a>
           </div>
-          <p className="text-white font-extrabold text-xl w-[200px] text-center">
+          <p className="text-white font-extrabold text-xl w-[200px] text-center max-sm:hidden">
             Login
           </p>
+          <Menu
+            as="div"
+            className="relative inline-block text-left md:hidden max-sm:visible"
+          >
+            <div>
+              <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                <IconMenu />
+              </Menu.Button>
+            </div>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <div className="py-1">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="#"
+                        className={classNames(
+                          active
+                            ? "bg-gray-100 text-gray-900"
+                            : "text-gray-700",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        Travel
+                      </a>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="#"
+                        className={classNames(
+                          active
+                            ? "bg-gray-100 text-gray-900"
+                            : "text-gray-700",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        University
+                      </a>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="#"
+                        className={classNames(
+                          active
+                            ? "bg-gray-100 text-gray-900"
+                            : "text-gray-700",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        Login
+                      </a>
+                    )}
+                  </Menu.Item>
+                </div>
+              </Menu.Items>
+            </Transition>
+          </Menu>
         </div>
 
-        <div className="flex flex-row w-full  px-14">
-          <div className="flex flex-col w-1/2 justify-center">
-            <p className="text-6xl/relaxed text-white font-extrabold">
+        <div className="flex flex-row w-full  px-14 max-sm:flex-col max-sm:px-4 max-sm:space-y-6">
+          <div className="flex flex-col w-1/2 justify-center max-sm:w-full max-sm:items-center max-sm:text-center">
+            <p className="text-6xl/relaxed text-white font-extrabold max-sm:text-3xl">
               <span className="underline">Safer</span> University <br /> Safer
               studies <br /> Better <span className="underline"> future</span>
             </p>
           </div>
 
-          <div className="flex flex-col w-1/2 justify-center">
-            <img src="unibghd.png" className="w-[800px] h-[400px]" />
+          <div className="flex flex-col w-1/2 justify-center max-sm:w-full max-sm:items-center">
+            <img
+              src="unibghd.png"
+              className="w-[800px] h-[400px] max-sm:w-[300px] max-sm:h-[150px]"
+            />
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-7 w-full py-[50px] text-xl font-extrabold text-white text-center">
+        <div className="grid grid-cols-3 gap-7 w-full py-[50px] text-xl font-extrabold text-white text-center max-sm:grid-cols-1">
           <div className="flex flex-col items-center justify-centers space-y-3">
             <p className="max-w-[300px]">
               Fast and accurate emergency response
@@ -79,7 +160,7 @@ export default function University() {
             <p className="max-w-[300px]">
               Every important phone number you will need{" "}
             </p>
-            <img src="iphone.png" className="w-[64px] h-[64px]" />
+            <img src="iphone.png" className="w-[64px] h-[64px] transform translate-x-[16px]" />
           </div>
           <div className="flex flex-col items-center justify-center w-full space-y-3">
             <p className="max-w-[300px]">
@@ -93,20 +174,20 @@ export default function University() {
         <HeaderUniSection />
       </div>
       <div className="flex flex-col w-full items-center justify-center">
-        <CenterFeatureSections />
+        <CenterFeatureSectionUni />
       </div>
       <div className="flex flex-col w-full items-center justify-center py-[130px]">
         <p className="text-3xl font-extrabold text-red-700 pb-[80px]">
           How it works
         </p>
         <div className="grid grid-cols-3 max-sm:grid-cols-1 w-full">
-          <div className="flex flex-col w-full items-end justify-center">
+          <div className="flex flex-col w-full items-end justify-center max-sm:items-center">
             <img
               src={stepContent[step as keyof typeof stepContent].photo}
               className="w-[172px] h-[373px] rounded-xl shadow-2xl shadow-redonebg"
             />
           </div>
-          <div className="flex flex-col w-full text-center items-center justify-center space-y-4">
+          <div className="flex flex-col w-full text-center items-center justify-center space-y-4 max-sm:h-[300px]">
             <p className="font-extrabold text-lg w-[200px]">
               {stepContent[step as keyof typeof stepContent].title}
             </p>
@@ -114,7 +195,7 @@ export default function University() {
               {stepContent[step as keyof typeof stepContent].description}{" "}
             </p>
           </div>
-          <div className="flex flex-col justify-between  w-full">
+          <div className="flex flex-col justify-between  w-full max-sm:items-center max-sm:space-y-6">
             <button
               onClick={() => handleStepChange(1)}
               onMouseEnter={() => handleStepChange(1)}
@@ -141,10 +222,6 @@ export default function University() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center">
-        <AimUniContent />
-      </div>
-
       <div
         id="gettheapp"
         className="flex flex-col bg-gradient-to-br to-redonebg  from-redtwobg via-90% p-10 items-center
@@ -189,7 +266,7 @@ export default function University() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-          <BecomeResponer />
+        <BecomeResponer />
       </div>
       <BackgroundGradientAnimationMin>
         <footer className="flex flex-col w-full px-[25px] max-sm:px-[10px] py-[15px]">

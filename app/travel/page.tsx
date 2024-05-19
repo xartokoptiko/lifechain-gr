@@ -4,9 +4,16 @@ import FeatureSection from "@/components/feature-section";
 import { BackgroundGradientAnimationMin } from "@/components/ui/background-gradient-animation-min";
 import CenterFeatureSections from "@/components/ui/center-feature-section";
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import { Menu, Transition } from '@headlessui/react'
+import {IconMenu} from "@tabler/icons-react";
 
 export default function Travel() {
+
+  function classNames(...classes: any[]) {
+    return classes.filter(Boolean).join(" ");
+  }
+
   const [step, setStep] = useState(1);
 
   const stepContent = {
@@ -36,25 +43,103 @@ export default function Travel() {
   return (
     <main>
       <div className="flex flex-col w-full pb-[100px] bg-gradient-to-br from-red-700 via-red-600 to-purple-700">
-        <div className="flex flex-row py-10 px-14 items-center justify-between">
+        <div className="flex flex-row py-10 px-14 items-center justify-between max-sm:px-4">
           <Link href={"/"}>
             <img
               src="logo.png"
               className="min-w-[200px] max-w-[200px] min-h-[80px] max-h-[80px] mr-[35px]"
             />
           </Link>
-          <div className="flex flex-row items-center justify-center text-white font-extrabold space-x-3">
+          <div className="flex flex-row items-center justify-center text-white font-extrabold space-x-3 max-sm:hidden">
             <a href="#">Travel</a>
             <a href="/university">University</a>
           </div>
-          <p className="text-white font-extrabold text-xl w-[200px] text-center">
+          <p className="text-white font-extrabold text-xl w-[200px] text-center max-sm:hidden">
             Safe travel, happy travel
           </p>
+          <Menu as="div" className="relative inline-block text-left md:hidden max-sm:visible">
+          <div>
+            <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+              <IconMenu />
+            </Menu.Button>
+          </div>
+
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-100"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
+          >
+            <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div className="py-1">
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Account settings
+                    </a>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Support
+                    </a>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="#"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      License
+                    </a>
+                  )}
+                </Menu.Item>
+                <form method="POST" action="#">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button
+                        type="submit"
+                        className={classNames(
+                          active
+                            ? "bg-gray-100 text-gray-900"
+                            : "text-gray-700",
+                          "block w-full px-4 py-2 text-left text-sm"
+                        )}
+                      >
+                        Sign out
+                      </button>
+                    )}
+                  </Menu.Item>
+                </form>
+              </div>
+            </Menu.Items>
+          </Transition>
+        </Menu>
         </div>
 
-        <div className="flex flex-row w-full px-14">
-          <div className="flex flex-col w-1/2 justify-center">
-            <p className="pl-[30px] text-8xl font-extrabold text-white">
+        <div className="flex flex-row w-full px-14 max-sm:flex-col max-sm:px-4">
+          <div className="flex flex-col w-1/2 justify-center max-sm:mb-16">
+            <p className="pl-[30px] text-8xl max-sm:text-5xl font-extrabold text-white max-sm:w-full">
               We
               <br />
               Make <span className="underline">your</span>
@@ -64,12 +149,12 @@ export default function Travel() {
               <span className="underline">Safer</span>
             </p>
           </div>
-          <div className="flex flex-col w-1/2 items-center justify-center">
-            <img src="welcome_compo.png" className="w-[500px] h-[700px]" />
+          <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
+            <img src="welcome_compo.png" className="w-[500px] h-[700px] max-sm:w-[300px] max-sm:h-[500px]" />
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-7 w-full py-[50px] text-xl font-extrabold text-white text-center">
+        <div className="grid grid-cols-3 gap-7 w-full py-[50px] text-xl font-extrabold text-white text-center max-sm:grid-cols-1">
           <div className="flex flex-col items-center justify-centers space-y-3">
             <p className="max-w-[300px]">
               Fast and accurate emergency response
@@ -100,14 +185,14 @@ export default function Travel() {
         <p className="text-3xl font-extrabold text-red-700 pb-[80px]">
           How it works
         </p>
-        <div className="grid grid-cols-3 max-sm:grid-cols-1 w-full">
-          <div className="flex flex-col w-full items-end justify-center">
+        <div className="grid grid-cols-3 max-sm:grid-cols-1 w-full max-sm:gap-10">
+          <div className="flex flex-col w-full items-end justify-center max-sm:justify-center max-sm:items-center">
             <img
               src={stepContent[step as keyof typeof stepContent].photo}
               className="w-[172px] h-[373px] rounded-xl shadow-2xl shadow-redonebg"
             />
           </div>
-          <div className="flex flex-col w-full text-center items-center justify-center space-y-4">
+          <div className="flex flex-col w-full text-center items-center justify-center space-y-4 max-sm:h-[200px]">
             <p className="font-extrabold text-lg w-[200px]">
               {stepContent[step as keyof typeof stepContent].title}
             </p>
@@ -115,7 +200,7 @@ export default function Travel() {
               {stepContent[step as keyof typeof stepContent].description}{" "}
             </p>
           </div>
-          <div className="flex flex-col justify-between  w-full">
+          <div className="flex flex-col justify-between  w-full max-sm:items-center max-sm:space-y-6">
             <button
               onClick={() => handleStepChange(1)}
               onMouseEnter={() => handleStepChange(1)}
