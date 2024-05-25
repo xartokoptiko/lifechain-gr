@@ -280,24 +280,24 @@ export default function University() {
 
             <div className="flex flex-col max-sm:w-full mt-[35px] items-center">
               <div className="space-y-3 flex flex-col">
-                <p>Instagram</p>
-                <p>Facebook</p>
-                <p>Linked in</p>
+                <a href="https://www.instagram.com/lifechain.gr/">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=61554962138127&locale=el_GR">Facebook</a>
+                <a href="https://www.linkedin.com/company/life-chain-app/">Linked in</a>
               </div>
             </div>
 
             <div className="flex flex-col mt-[35px] items-center">
               <div className="space-y-3 flex flex-col">
-                <a>Travel</a>
-                <a>University</a>
-                <a>Login</a>
+                <a href="/travel">Travel</a>
+                <a href="/university">University</a>
+                <a href="/login">Login</a>
               </div>
             </div>
 
             <div className="flex flex-col mt-[35px] items-center">
               <div className="space-y-3 flex flex-col">
-                <a>Privacy Policy</a>
-                <a>Terms of use</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/tou">Terms of use</a>
               </div>
             </div>
 
