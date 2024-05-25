@@ -86,6 +86,7 @@ const config: Config = {
   },
   plugins: [
     addVariablesForColors,
+    require('flowbite/plugin')
   ],
 };
 export default config;

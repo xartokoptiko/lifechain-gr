@@ -1,24 +1,47 @@
 "use client";
-import AimUniContent from "@/components/ui/aim-content";
 import { BackgroundGradientAnimationMin } from "@/components/ui/background-gradient-animation-min";
 import BecomeResponer from "@/components/ui/become-responder";
-import CenterFeatureSections from "@/components/ui/center-feature-section";
 import HeaderUniSection from "@/components/ui/header-section";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import { WavyBackground } from "@/components/ui/wavy-background";
+import { UserAuth } from "../context/AuthContext";
 import Link from "next/link";
 import { Fragment, useState } from "react";
-import { Menu, Transition } from '@headlessui/react'
-import {IconMenu} from "@tabler/icons-react";
+import { Menu, Transition } from "@headlessui/react";
+import { IconMenu } from "@tabler/icons-react";
 import CenterFeatureSectionUni from "@/components/ui/center-feature-section-uni";
+import { LoginModal } from "@/components/login-modal";
+import {UserProfileModal} from "@/components/profile-modal";
 
 export default function University() {
+  const { user, signInWithEmail, logOut, userDetails } = UserAuth();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+
+  console.log(user);
+  console.log(userDetails)
 
   function classNames(...classes: any[]) {
     return classes.filter(Boolean).join(" ");
   }
 
   const [step, setStep] = useState(1);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.body.classList.add("overflow-hidden");
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.classList.remove("overflow-hidden");
+  };
+
+  const openProfileodal = () => {
+    setIsProfileModalOpen(true);
+  };
+
+  const closeProfileModal = () => {
+    setIsProfileModalOpen(false);
+  };
 
   const stepContent = {
     1: {
@@ -58,9 +81,35 @@ export default function University() {
             <a href="/travel">Travel</a>
             <a href="/#">University</a>
           </div>
-          <p className="text-white font-extrabold text-xl w-[200px] text-center max-sm:hidden">
-            Login
-          </p>
+          {!user ? (
+            <>
+              <p
+                onClick={openModal}
+                className="cursor-pointer text-white font-extrabold text-xl w-[200px] text-center max-sm:hidden"
+              >
+                Login
+              </p>
+              <LoginModal isModalOpen={isModalOpen} closeModal={closeModal} />
+            </>
+          ) : (
+            <>
+              <div className="flex flex-row items-center justify-center text-white font-extrabold space-x-3 max-sm:hidden">
+                <a
+                  onClick={openProfileodal}
+                  className="cursor-pointer text-white font-extrabold text-xl text-center max-sm:hidden"
+                >
+                  profile
+                </a>
+                <UserProfileModal isModalOpen={isProfileModalOpen} closeModal={closeProfileModal} userDetails={userDetails}/>
+                <p
+                  onClick={logOut}
+                  className="cursor-pointer text-white font-extrabold text-xl  text-center max-sm:hidden"
+                >
+                  Log out
+                </p>
+              </div>
+            </>
+          )}
           <Menu
             as="div"
             className="relative inline-block text-left md:hidden max-sm:visible"
@@ -160,7 +209,10 @@ export default function University() {
             <p className="max-w-[300px]">
               Every important phone number you will need{" "}
             </p>
-            <img src="iphone.png" className="w-[64px] h-[64px] transform translate-x-[16px]" />
+            <img
+              src="iphone.png"
+              className="w-[64px] h-[64px] transform translate-x-[16px]"
+            />
           </div>
           <div className="flex flex-col items-center justify-center w-full space-y-3">
             <p className="max-w-[300px]">
@@ -281,8 +333,12 @@ export default function University() {
             <div className="flex flex-col max-sm:w-full mt-[35px] items-center">
               <div className="space-y-3 flex flex-col">
                 <a href="https://www.instagram.com/lifechain.gr/">Instagram</a>
-                <a href="https://www.facebook.com/profile.php?id=61554962138127&locale=el_GR">Facebook</a>
-                <a href="https://www.linkedin.com/company/life-chain-app/">Linked in</a>
+                <a href="https://www.facebook.com/profile.php?id=61554962138127&locale=el_GR">
+                  Facebook
+                </a>
+                <a href="https://www.linkedin.com/company/life-chain-app/">
+                  Linked in
+                </a>
               </div>
             </div>
 
